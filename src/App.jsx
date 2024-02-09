@@ -1,14 +1,16 @@
 import Service from "./components/Service";
-import Slider from "./components/slider/Slider";
+import News from "./components/news/News";
 
 const App = () => {
   return (
     <div className="">
-      <Slider />
+      {/* <Slider /> */}
       <div>
         <Service />
       </div>
-      <div className="h-[200vh]"></div>
+      <div>
+        <News />
+      </div>
     </div>
   );
 };
