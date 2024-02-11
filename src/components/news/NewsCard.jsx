@@ -9,9 +9,8 @@ const NewsCard = ({ news }) => {
     setShowText((prev) => !prev);
   };
 
-  console.log(showText);
   return (
-    <div className="w-full max-w-sm mx-auto sm:max-w-full cShadow rounded-md overflow-hidden">
+    <div className="w-full max-w-sm mx-auto sm:max-w-full cShadow rounded-md overflow-hidden bg-white">
       <div className="p-3 rounded-md ">
         <img
           src={img}
