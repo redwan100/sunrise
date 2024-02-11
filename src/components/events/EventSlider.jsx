@@ -14,7 +14,7 @@ const EventSlider = () => {
       <div className="my-4">
         <SectionTitle title="recent events" />
       </div>
-      <Swiper autoplay={{ delay: 5000 }} modules={[Autoplay]}>
+      <Swiper autoplay={{ delay: 800 }} modules={[Autoplay]}>
         <SwiperSlide>
           <img src={img1} alt="" />
         </SwiperSlide>

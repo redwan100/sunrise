@@ -5,13 +5,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import slideImg from "../../assets/slide1.jpg";
 
+import { Autoplay } from "swiper/modules";
+
 const Slider = () => {
   return (
     <>
       <Swiper
         className="mySwiper"
-        // autoplay={{ delay: 1000 }}
-        // modules={[Autoplay]}
+        autoplay={{ delay: 1000 }}
+        modules={[Autoplay]}
       >
         <SwiperSlide className="max-w-full">
           <img
