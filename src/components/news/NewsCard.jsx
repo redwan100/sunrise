@@ -10,12 +10,12 @@ const NewsCard = ({ news }) => {
   };
 
   return (
-    <div className="w-full max-w-sm mx-auto sm:max-w-full cShadow rounded-md overflow-hidden bg-white">
-      <div className="p-3 rounded-md ">
+    <div className="w-full max-w-sm mx-auto sm:max-w-full cShadow rounded-md overflow-hidden bg-white  p-3">
+      <div className=" rounded-md overflow-hidden group">
         <img
           src={img}
-          alt="news imaage"
-          className="max-w-full w-full rounded-md"
+          alt="news image"
+          className="max-w-full w-full  group-hover:scale-105 transition"
         />
       </div>
       <div className="p-3">

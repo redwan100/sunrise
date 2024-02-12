@@ -13,12 +13,48 @@ const Footer = () => {
             </h1>
             <hr className="mb-6" />
             <div className="grid gap-5 grid-cols-3 mt-4">
-              <img src={gallery} alt="gallery image" />
-              <img src={gallery} alt="gallery image" />
-              <img src={gallery} alt="gallery image" />
-              <img src={gallery} alt="gallery image" />
-              <img src={gallery} alt="gallery image" />
-              <img src={gallery} alt="gallery image" />
+              <div className="overflow-hidden rounded-sm">
+                <img
+                  src={gallery}
+                  alt="gallery image"
+                  className="hover:scale-105 transition"
+                />
+              </div>
+              <div className="overflow-hidden rounded-sm">
+                <img
+                  src={gallery}
+                  alt="gallery image"
+                  className="hover:scale-105 transition"
+                />
+              </div>
+              <div className="overflow-hidden rounded-sm">
+                <img
+                  src={gallery}
+                  alt="gallery image"
+                  className="hover:scale-105 transition"
+                />
+              </div>
+              <div className="overflow-hidden rounded-sm">
+                <img
+                  src={gallery}
+                  alt="gallery image"
+                  className="hover:scale-105 transition"
+                />
+              </div>
+              <div className="overflow-hidden rounded-sm">
+                <img
+                  src={gallery}
+                  alt="gallery image"
+                  className="hover:scale-105 transition"
+                />
+              </div>
+              <div className="overflow-hidden rounded-sm">
+                <img
+                  src={gallery}
+                  alt="gallery image"
+                  className="hover:scale-105 transition"
+                />
+              </div>
             </div>
           </div>
 
@@ -93,6 +129,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
       <div className="w-full bg-gray-900 py-4">
         <div className=" flex items-center justify-between my-container">
           <p className="text-gray-50">
