@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import Container from "./Container";
 
+import { CgMenuLeft } from "react-icons/cg";
+
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
 
@@ -61,10 +63,10 @@ const Navbar = () => {
       >
         <Container>
           <div className=" flex items-center gap-8 text-lg p-3 justify-between">
-            <img src={logo} alt="logo" className="w-[8rem]" />
+            <img src={logo} alt="logo" className="xl:w-[8rem] w-[5rem]" />
 
             {/* menu  */}
-            <div>
+            <div className="hidden xl:block">
               <ul className="flex items-center gap-4">
                 <li className="font-medium text-xl hover:text-primary-1 transition-colors">
                   <Link to={"/"}>Home</Link>
@@ -148,9 +150,38 @@ const Navbar = () => {
                 {/* drop down menu  */}
               </ul>
             </div>
+
+            {/* hamburger menu  */}
+
+            <CgMenuLeft className="xl:hidden text-3xl cursor-pointer hover:text-primary-1 transition-colors " />
           </div>
         </Container>
       </nav>
+
+      {/* responsive sidebar  */}
+
+      <div className="w-full h-full fixed top-0 left-0 bg-slate-300/80 z-50 xl:hidden">
+        <ul className=" p-4 space-y-3 bg-white w-1/2 h-full  ">
+          <li className="text-lg font-medium">
+            <Link to={"/"}>Home</Link>
+            <hr className="h-[2px] bg-primary-1" />
+          </li>
+          <li className="overflow-hidden ">
+            <h1 className="text-lg font-medium mb-1 cursor-pointer">
+              About Page
+            </h1>
+            <ul
+              className={`bg-gray-400 pl-3 rounded-md transition-all duration-300 `}
+            >
+              <li>page 1</li>
+              <li>page 2</li>
+              <li>page 3</li>
+              <li>page 4</li>
+              <li>page 5</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </>
   );
 };
