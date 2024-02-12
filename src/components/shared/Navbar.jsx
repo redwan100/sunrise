@@ -61,7 +61,7 @@ const Navbar = () => {
       >
         <Container>
           <div className=" flex items-center gap-8 text-lg p-3 justify-between">
-            <img src={logo} alt="logo" className="w-[6rem]" />
+            <img src={logo} alt="logo" className="w-[8rem]" />
 
             {/* menu  */}
             <div>
