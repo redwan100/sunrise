@@ -1,102 +1,13 @@
 import { useEffect, useState } from "react";
 import { IoCall } from "react-icons/io5";
-import { MdEmail, MdOutlineLocationCity } from "react-icons/md";
-import { TiArrowSortedDown } from "react-icons/ti";
-import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo.jpeg";
+import {
+  MdEmail,
+  MdOutlineArrowDropDown,
+  MdOutlineLocationCity,
+} from "react-icons/md";
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
 import Container from "./Container";
-const navbar = [
-  {
-    title: "home",
-    path: "/",
-  },
-  {
-    title: "about us",
-    path: "/about",
-    children: [
-      {
-        title: "page 1",
-        path: "/page1",
-      },
-      {
-        title: "page 2",
-        path: "/page2",
-      },
-      {
-        title: "page 1",
-        path: "/page1",
-      },
-      {
-        title: "page 2",
-        path: "/page2",
-      },
-      {
-        title: "page 1",
-        path: "/page1",
-      },
-      {
-        title: "page 2",
-        path: "/page2",
-      },
-    ],
-  },
-  {
-    title: "about us",
-    path: "/about",
-    children: [
-      {
-        title: "page 1",
-        path: "/page1",
-      },
-      {
-        title: "page 2",
-        path: "/page2",
-      },
-    ],
-  },
-  {
-    title: "about us",
-    path: "/about",
-    children: [
-      {
-        title: "page 1",
-        path: "/page1",
-      },
-      {
-        title: "page 2",
-        path: "/page2",
-      },
-    ],
-  },
-  {
-    title: "about us",
-    path: "/about",
-    children: [
-      {
-        title: "page 1",
-        path: "/page1",
-      },
-      {
-        title: "page 2",
-        path: "/page2",
-      },
-    ],
-  },
-  {
-    title: "about us",
-    path: "/about",
-    children: [
-      {
-        title: "page 1",
-        path: "/page1",
-      },
-      {
-        title: "page 2",
-        path: "/page2",
-      },
-    ],
-  },
-];
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -149,40 +60,112 @@ const Navbar = () => {
         }`}
       >
         <Container>
-          <div className=" flex items-center gap-8 text-lg p-3 justify-center">
-            <img src={logo} alt="logo" className="size-14" />
+          <div className=" flex items-center gap-8 text-lg p-3 justify-between">
+            <img src={logo} alt="logo" className="w-[6rem]" />
 
-            <div className="flex items-center gap-3">
-              {navbar.map((nav) => (
-                <div key={nav} className="relative">
-                  <div className="relative group">
-                    <NavLink to={nav.path} className="flex items-center">
-                      <span className="capitalize font-medium hover:text-[#22c55e]">
-                        {nav.title}
-                      </span>
-                      {nav?.children && (
-                        <TiArrowSortedDown className="inline-block text-gray-600" />
-                      )}
-                    </NavLink>
-                    {nav?.children && (
-                      <div
-                        className=" hidden absolute top-6 transition-all duration-300 -right-5 shadow-md z-20 bg-white
-                       text-gray-600 min-w-[5rem] w-fit rounded-md group-hover:flex flex-col items-center overflow-hidden "
-                      >
-                        {nav?.children?.map((child) => (
-                          <NavLink
-                            key={child}
-                            to={child.path}
-                            className="hover:bg-slate-500 hover:text-white transition-all py-1 px-3  w-full border-b-2"
-                          >
-                            {child.title}
-                          </NavLink>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
+            {/* menu  */}
+            <div>
+              <ul className="flex items-center gap-4">
+                <li className="font-medium text-xl">
+                  <Link to={"/"}>Home</Link>
+                </li>
+
+                {/* drop down menu  */}
+                <li className="relative w-full group">
+                  <h1 className="cursor-pointer font-medium text-xl flex items-center ">
+                    About us
+                    <MdOutlineArrowDropDown className="text-gray-400" />
+                  </h1>
+                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-slate-400 hover:*:text-gray-50  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                  </ul>
+                </li>
+                {/* drop down menu  */}
+                {/* drop down menu  */}
+                <li className="relative w-full group">
+                  <h1 className="cursor-pointer font-medium text-xl flex items-center ">
+                    About us
+                    <MdOutlineArrowDropDown className="text-gray-400" />
+                  </h1>
+                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-slate-400 hover:*:text-gray-50  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                  </ul>
+                </li>
+                {/* drop down menu  */}
+                {/* drop down menu  */}
+                <li className="relative w-full group">
+                  <h1 className="cursor-pointer font-medium text-xl flex items-center ">
+                    About us
+                    <MdOutlineArrowDropDown className="text-gray-400" />
+                  </h1>
+                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-slate-400 hover:*:text-gray-50  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                  </ul>
+                </li>
+                {/* drop down menu  */}
+                {/* drop down menu  */}
+                <li className="relative w-full group">
+                  <h1 className="cursor-pointer font-medium text-xl flex items-center ">
+                    About us
+                    <MdOutlineArrowDropDown className="text-gray-400" />
+                  </h1>
+                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-slate-400 hover:*:text-gray-50  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                  </ul>
+                </li>
+                {/* drop down menu  */}
+                {/* drop down menu  */}
+                <li className="relative w-full group">
+                  <h1 className="cursor-pointer font-medium text-xl flex items-center ">
+                    About us
+                    <MdOutlineArrowDropDown className="text-gray-400" />
+                  </h1>
+                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-slate-400 hover:*:text-gray-50  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                    <li>
+                      <Link to={"/"}>about us</Link>
+                    </li>
+                  </ul>
+                </li>
+                {/* drop down menu  */}
+              </ul>
             </div>
           </div>
         </Container>
