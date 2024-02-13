@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { IoCall } from "react-icons/io5";
 import {
   MdEmail,
+  MdKeyboardArrowDown,
   MdOutlineArrowDropDown,
   MdOutlineLocationCity,
 } from "react-icons/md";
@@ -10,9 +11,25 @@ import logo from "../../assets/logo.png";
 import Container from "./Container";
 
 import { CgMenuLeft } from "react-icons/cg";
-
+import { IoCloseSharp } from "react-icons/io5";
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
+
+  const [selected, setSelected] = useState(null);
+
+  const [showNav, setShowNav] = useState(false);
+
+  const toggleNav = () => {
+    setShowNav((prev) => !prev);
+  };
+
+  const toggleDropdown = (linkName) => {
+    if (selected === linkName) {
+      return setSelected(null);
+    }
+
+    setSelected(linkName);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +48,9 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); //
+  }, []);
+
+  console.log(showNav);
   return (
     <>
       <div className="w-full bg-green-500 text-white py-3 px-2 hidden md:block">
@@ -153,28 +172,52 @@ const Navbar = () => {
 
             {/* hamburger menu  */}
 
-            <CgMenuLeft className="xl:hidden text-3xl cursor-pointer hover:text-primary-1 transition-colors " />
+            <CgMenuLeft
+              className="xl:hidden text-3xl cursor-pointer hover:text-primary-1 transition-colors "
+              onClick={toggleNav}
+            />
           </div>
         </Container>
       </nav>
 
       {/* responsive sidebar  */}
 
-      <div className="w-full h-full fixed top-0 left-0 bg-slate-300/80 z-50 xl:hidden">
-        <ul className=" p-4 space-y-3 bg-white w-1/2 h-full  ">
-          <li className="text-lg font-medium">
+      <div
+        className={`w-full h-full fixed top-0 right-0 transition duration-300 bg-slate-700/80 z-50 xl:hidden   ${
+          showNav ? "translate-x-full" : "translate-x-0"
+        }`}
+      >
+        <ul className=" p-6 space-y-3 sm:w-1/2 w-3/4 h-full bg-gradient-to-tl to-gray-300 from-gray-100 shadow-xl absolute top-0 right-0">
+          {/* close button  */}
+          <IoCloseSharp
+            className="absolute top-3 right-3 text-2xl text-primary-1 cursor-pointer"
+            onClick={toggleNav}
+          />
+          {/* close button  */}
+
+          <li className="text-lg font-medium border-b border-dashed border-primary-1">
             <Link to={"/"}>Home</Link>
-            <hr className="h-[2px] bg-primary-1" />
+            {/* <hr className="h-[2px] bg-primary-1" /> */}
           </li>
-          <li className="overflow-hidden ">
-            <h1 className="text-lg font-medium mb-1 cursor-pointer">
-              About Page
-            </h1>
-            <ul
-              className={`bg-gray-400 pl-3 rounded-md transition-all duration-300 `}
+          <li className="overflow-hidden transition duration-500 ">
+            <div
+              onClick={() => toggleDropdown("about")}
+              className="flex items-center justify-between cursor-pointer"
             >
+              <h1 className="text-lg font-medium mb-1 ">About Page</h1>
+              <MdKeyboardArrowDown className="text-2xl " />
+            </div>
+            <ul
+              className={`bg-gray-100  rounded-md transition duration-300 space-y-3 *:text-slate-800 hover:*:text-primary-1 *:cursor-pointer *:border-b *:border-primary-1/40 *:border-dashed *:pb-1  ${
+                selected === "about"
+                  ? "max-h-max border border-slate-300 py-2 px-4 h-full transition duration-500 shadow-sm"
+                  : "max-h-0 h-0 transition  duration-200"
+              }`}
+            >
+              <li>
+                <Link to={"/about"}>About us </Link>
+              </li>
               <li>page 1</li>
-              <li>page 2</li>
               <li>page 3</li>
               <li>page 4</li>
               <li>page 5</li>
