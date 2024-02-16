@@ -97,7 +97,7 @@ const Navbar = () => {
                     About us
                     <MdOutlineArrowDropDown className="text-gray-400" />
                   </h1>
-                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-slate-400 hover:*:text-gray-50  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
+                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible ">
                     <li>
                       <Link to={"/"}>about us</Link>
                     </li>
@@ -116,7 +116,7 @@ const Navbar = () => {
                     About us
                     <MdOutlineArrowDropDown className="text-gray-400" />
                   </h1>
-                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-slate-400 hover:*:text-gray-50  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
+                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
                     <li>
                       <Link to={"/"}>about us</Link>
                     </li>
@@ -135,7 +135,7 @@ const Navbar = () => {
                     About us
                     <MdOutlineArrowDropDown className="text-gray-400" />
                   </h1>
-                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-slate-400 hover:*:text-gray-50  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
+                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
                     <li>
                       <Link to={"/"}>about us</Link>
                     </li>
@@ -154,7 +154,7 @@ const Navbar = () => {
                     About us
                     <MdOutlineArrowDropDown className="text-gray-400" />
                   </h1>
-                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-slate-400 hover:*:text-gray-50  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
+                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
                     <li>
                       <Link to={"/"}>about us</Link>
                     </li>

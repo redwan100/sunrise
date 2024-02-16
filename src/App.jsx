@@ -1,15 +1,17 @@
 // import EventAndAchievement from "./components/events/EventAndAchievement";
+import EventAndAchievement from "./components/events/EventAndAchievement";
 import News from "./components/news/News";
 import Program from "./components/program/Program";
 import Project from "./components/project/Project";
 import Service from "./components/service/Service";
-// import Slider from "./components/slider/Slider";
+import Slider from "./components/slider/Slider";
 import TopPriority from "./components/topPriority/TopPriority";
+import Donation from "./pages/donation/Donation";
 
 const App = () => {
   return (
     <div className="">
-      {/* <Slider /> */}
+      <Slider />
       <div>
         <Service />
       </div>
@@ -25,7 +27,12 @@ const App = () => {
       <div>
         <Project />
       </div>
-      <div>{/* <EventAndAchievement /> */}</div>
+      <div>
+        <EventAndAchievement />
+      </div>
+      <div>
+        <Donation />
+      </div>
     </div>
   );
 };
