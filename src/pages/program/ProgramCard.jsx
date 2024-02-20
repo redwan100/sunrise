@@ -18,7 +18,7 @@ const ProgramCard = ({ program }) => {
 
         <Link
           to={"/"}
-          className="transition hover:text-primary-1 inline-flex items-center font-semibold text-sm bg-primary-1/10 py-1 px-2  rounded-sm text-primary-1 hover:bg-primary-1/20 ml-auto "
+          className="transition hover:text-primary-1 inline-flex items-center font-semibold text-sm bg-primary-1/10 py-2 px-4  rounded-sm text-primary-1 hover:bg-primary-1/20 ml-auto "
         >
           Read More <IoIosArrowRoundForward className="text-xl " />
         </Link>

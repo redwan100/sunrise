@@ -1,12 +1,14 @@
 // import EventAndAchievement from "./components/events/EventAndAchievement";
-import EventAndAchievement from "./components/events/EventAndAchievement";
-import News from "./components/news/News";
-import Program from "./components/program/Program";
-import Project from "./components/project/Project";
-import Service from "./components/service/Service";
+
 import Slider from "./components/slider/Slider";
-import TopPriority from "./components/topPriority/TopPriority";
 import Donation from "./pages/donation/Donation";
+import EventAndAchievement from "./pages/events/EventAndAchievement";
+import MomentOfSunrise from "./pages/momentOfSunrise/MomentOfSunrise";
+import News from "./pages/news/News";
+import Program from "./pages/program/Program";
+import Project from "./pages/project/Project";
+import Service from "./pages/service/Service";
+import TopPriority from "./pages/topPriority/TopPriority";
 
 const App = () => {
   return (
@@ -32,6 +34,9 @@ const App = () => {
       </div>
       <div>
         <Donation />
+      </div>
+      <div>
+        <MomentOfSunrise />
       </div>
     </div>
   );

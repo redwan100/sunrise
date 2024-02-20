@@ -1,5 +1,5 @@
 import newsImg from "../../assets/news.jpg";
-import SectionTitle from "../shared/SectionTitle";
+import SectionTitle from "../../components/shared/SectionTitle";
 import NewsCard from "./NewsCard";
 const newses = [
   {

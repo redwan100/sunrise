@@ -77,96 +77,58 @@ const Navbar = () => {
 
       <nav
         className={`w-full shadow py-1 transition duration-500 ${
-          scrolling ? "sticky top-0 left-0 z-50 bg-white shadow-lg" : ""
+          scrolling
+            ? "sticky top-0 left-0 z-50 bg-gradient-to-bl to-pink-50 from-amber-100 shadow-lg"
+            : "bg-white"
         }`}
       >
         <Container>
           <div className=" flex items-center gap-8 text-lg p-3 justify-between">
-            <img src={logo} alt="logo" className="xl:w-[8rem] w-[5rem]" />
+            <img src={logo} alt="logo" className="xl:w-[5rem] w-[5rem]" />
 
             {/* menu  */}
             <div className="hidden xl:block">
-              <ul className="flex items-center gap-4">
-                <li className="font-medium text-xl hover:text-primary-1 transition-colors">
+              <ul className="flex items-center gap-3 w-max">
+                <li className="font-medium text-lg hover:text-primary-1 transition-colors">
                   <Link to={"/"}>Home</Link>
                 </li>
 
                 {/* drop down menu  */}
-                <li className="relative w-full group">
-                  <h1 className="cursor-pointer font-medium text-xl flex items-center hover:text-primary-1 transition-colors ">
-                    About us
+                <li className="relative  group">
+                  <h1 className="cursor-pointer font-medium text-lg flex items-center hover:text-primary-1 transition-colors ">
+                    Who We Are
                     <MdOutlineArrowDropDown className="text-gray-400" />
                   </h1>
-                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible ">
+                  <ul className="absolute left-0 top-3 z-30 w-[13rem] bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-2 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible *:text-base">
                     <li>
-                      <Link to={"/"}>about us</Link>
+                      <Link to={"/"}>Social Development</Link>
                     </li>
                     <li>
-                      <Link to={"/"}>about us</Link>
-                    </li>
-                    <li>
-                      <Link to={"/"}>about us</Link>
+                      <Link to={"/"}>Social Enterprise</Link>
                     </li>
                   </ul>
                 </li>
                 {/* drop down menu  */}
                 {/* drop down menu  */}
-                <li className="relative w-full group">
-                  <h1 className="cursor-pointer font-medium text-xl flex items-center hover:text-primary-1 transition-colors ">
-                    About us
+                <li className="relative  group">
+                  <h1 className="cursor-pointer font-medium text-lg flex items-center hover:text-primary-1 transition-colors ">
+                    What We Do
                     <MdOutlineArrowDropDown className="text-gray-400" />
                   </h1>
-                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
+                  <ul className="absolute left-0 top-3 z-30 w-[13rem] bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-2 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible *:text-base">
                     <li>
-                      <Link to={"/"}>about us</Link>
+                      <Link to={"/"}>Social Development</Link>
                     </li>
                     <li>
-                      <Link to={"/"}>about us</Link>
-                    </li>
-                    <li>
-                      <Link to={"/"}>about us</Link>
+                      <Link to={"/"}>Social Enterprise</Link>
                     </li>
                   </ul>
                 </li>
                 {/* drop down menu  */}
-                {/* drop down menu  */}
-                <li className="relative w-full group">
-                  <h1 className="cursor-pointer font-medium text-xl flex items-center hover:text-primary-1 transition-colors ">
-                    About us
-                    <MdOutlineArrowDropDown className="text-gray-400" />
-                  </h1>
-                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
-                    <li>
-                      <Link to={"/"}>about us</Link>
-                    </li>
-                    <li>
-                      <Link to={"/"}>about us</Link>
-                    </li>
-                    <li>
-                      <Link to={"/"}>about us</Link>
-                    </li>
-                  </ul>
+
+                <li className="font-medium text-lg hover:text-primary-1 transition-colors">
+                  <Link to={"/"}>Contact</Link>
                 </li>
-                {/* drop down menu  */}
-                {/* drop down menu  */}
-                <li className="relative w-full group">
-                  <h1 className="cursor-pointer font-medium text-xl flex items-center hover:text-primary-1 transition-colors ">
-                    About us
-                    <MdOutlineArrowDropDown className="text-gray-400" />
-                  </h1>
-                  <ul className="absolute left-0 top-3 w-full z-30 bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-4 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible">
-                    <li>
-                      <Link to={"/"}>about us</Link>
-                    </li>
-                    <li>
-                      <Link to={"/"}>about us</Link>
-                    </li>
-                    <li>
-                      <Link to={"/"}>about us</Link>
-                    </li>
-                  </ul>
-                </li>
-                {/* drop down menu  */}
               </ul>
             </div>
 

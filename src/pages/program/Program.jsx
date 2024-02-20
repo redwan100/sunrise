@@ -1,6 +1,6 @@
 import pImg1 from "../../assets/program1.jpg";
 import pImg2 from "../../assets/program2.jpg";
-import SectionTitle from "../shared/SectionTitle";
+import SectionTitle from "../../components/shared/SectionTitle";
 import ProgramCard from "./ProgramCard";
 
 const programData = [

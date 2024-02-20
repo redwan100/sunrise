@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 // import required modules
 import { Autoplay } from "swiper/modules";
-import SectionTitle from "../shared/SectionTitle";
+import SectionTitle from "../../components/shared/SectionTitle";
 
 const EventSlider = () => {
   return (

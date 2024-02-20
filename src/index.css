@@ -9,9 +9,13 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .my-container {
-  @apply container mx-auto sm:max-w-[80%] w-full px-3 md:px-1;
+  @apply container mx-auto sm:max-w-[80%] w-full px-4 md:px-1;
 }
 
 .cShadow {
   box-shadow: 0px 0px 20px -7px rgba(48, 47, 47, 0.4);
+}
+
+.hoverEffect {
+  @apply hover:bg-gradient-to-bl from-lime-100 to-green-200 transition;
 }
