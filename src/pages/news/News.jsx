@@ -29,44 +29,32 @@ const newses = [
   },
 ];
 
-const animateVariant = {
-  initial: {
-    y: -100,
-    opacity: 0,
-  },
-
-  animate: (index) => ({
-    y: 0,
-    opacity: 1,
-
-    transition: {
-      duration: 1,
-      delay: 0.1 * index,
-    },
-  }),
-};
-
 const News = () => {
   return (
     <div className="my-container">
-      <motion.div
-        initial="initial"
-        whileInView="animate"
-        custom={4}
-        variants={animateVariant}
-        viewport={{ once: false, amount: 0.5 }}
-        className="py-4 mb-8"
-      >
+      <div className="py-4 mb-8">
         <SectionTitle isCenter title="latest news" />
-      </motion.div>
+      </div>
       <div className="grid gap-7 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 items-center">
         {newses.map((news, index) => (
           <motion.div
             key={news.id}
-            initial="initial"
-            whileInView="animate"
-            custom={index}
-            variants={animateVariant}
+            initial={{
+              opacity: 0,
+              translateY: index % 2 === 0 ? -50 : 50,
+              translateX: index % 2 === 0 ? 50 : -50,
+              scale: 0.9,
+            }}
+            whileInView={{
+              opacity: 1,
+              translateY: 0,
+              translateX: 0,
+              scale: 1,
+            }}
+            transition={{
+              duration: 0.5,
+              staggerChildren: 0.6,
+            }}
             viewport={{ once: false, amount: 0.5 }}
           >
             <NewsCard news={news} index={index} />

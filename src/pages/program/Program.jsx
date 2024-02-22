@@ -34,23 +34,6 @@ const programData = [
   },
 ];
 
-const animateVariant = {
-  initial: {
-    y: -100,
-    opacity: 0,
-  },
-
-  animate: (index) => ({
-    y: 0,
-    opacity: 1,
-
-    transition: {
-      duration: 1,
-      delay: 0.1 * index,
-    },
-  }),
-};
-
 const Program = () => {
   return (
     <div className="w-full my-8 py-4 my-container">
@@ -60,10 +43,22 @@ const Program = () => {
       <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 max-w-sm mx-auto sm:max-w-full">
         {programData?.map((item, index) => (
           <motion.div
-            initial="initial"
-            whileInView="animate"
-            custom={index - 1}
-            variants={animateVariant}
+            initial={{
+              opacity: 0,
+              translateY: index % 2 === 0 ? -50 : 50,
+              translateX: index % 2 === 0 ? 50 : -50,
+              scale: 0.9,
+            }}
+            whileInView={{
+              opacity: 1,
+              translateY: 0,
+              translateX: 0,
+              scale: 1,
+            }}
+            transition={{
+              duration: 0.5,
+              staggerChildren: 0.6,
+            }}
             viewport={{ once: false, amount: 0.5 }}
             key={item.id}
           >
