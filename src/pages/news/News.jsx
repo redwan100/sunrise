@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import newsImg from "../../assets/news.jpg";
 import SectionTitle from "../../components/shared/SectionTitle";
 import NewsCard from "./NewsCard";
@@ -28,15 +29,48 @@ const newses = [
   },
 ];
 
+const animateVariant = {
+  initial: {
+    y: -100,
+    opacity: 0,
+  },
+
+  animate: (index) => ({
+    y: 0,
+    opacity: 1,
+
+    transition: {
+      duration: 1,
+      delay: 0.1 * index,
+    },
+  }),
+};
+
 const News = () => {
   return (
     <div className="my-container">
-      <div className="py-4 mb-8">
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        custom={4}
+        variants={animateVariant}
+        viewport={{ once: false, amount: 0.5 }}
+        className="py-4 mb-8"
+      >
         <SectionTitle isCenter title="latest news" />
-      </div>
+      </motion.div>
       <div className="grid gap-7 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 items-center">
-        {newses.map((news) => (
-          <NewsCard key={news.id} news={news} />
+        {newses.map((news, index) => (
+          <motion.div
+            key={news.id}
+            initial="initial"
+            whileInView="animate"
+            custom={index}
+            variants={animateVariant}
+            viewport={{ once: false, amount: 0.5 }}
+          >
+            <NewsCard news={news} index={index} />
+          </motion.div>
         ))}
       </div>
     </div>

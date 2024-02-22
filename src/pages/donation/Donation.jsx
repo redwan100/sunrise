@@ -39,7 +39,7 @@ const Donation = () => {
       </div>
       <div className="block mx-auto w-max mt-8 ">
         <Link
-          to={"/"}
+          to={"/donation-details"}
           className="bg-gradient-to-br from-green-500 to-green-600 py-2 px-4 rounded-md font-semibold text-lg w-full flex items-center gap-1 text-white hover:bg-gradient-to-br hover:from-green-600 hover:to-green-500 hover:transition duration-400"
         >
           Donate Here <FaHandHoldingDollar />

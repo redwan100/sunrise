@@ -50,7 +50,6 @@ const Navbar = () => {
     };
   }, []);
 
-  console.log(showNav);
   return (
     <>
       <div className="w-full bg-green-500 text-white py-3 px-2 hidden md:block">
@@ -99,7 +98,7 @@ const Navbar = () => {
                     Who We Are
                     <MdOutlineArrowDropDown className="text-gray-400" />
                   </h1>
-                  <ul className="absolute left-0 top-3 z-30 w-[13rem] bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-2 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible *:text-base">
+                  <ul className="absolute left-0 top-3 z-30 w-[13rem] bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-2 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible *:text-base overflow-hidden">
                     <li>
                       <Link to={"/"}>Social Development</Link>
                     </li>
@@ -115,7 +114,7 @@ const Navbar = () => {
                     What We Do
                     <MdOutlineArrowDropDown className="text-gray-400" />
                   </h1>
-                  <ul className="absolute left-0 top-3 z-30 w-[13rem] bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-2 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible *:text-base">
+                  <ul className="absolute left-0 top-3 z-30 w-[13rem] bg-white shadow-sm backdrop-blur-md *:text-gray-600 *:w-full hover:*:bg-gradient-to-tr from-lime-300 to-green-500  hover:*:text-gray-800 hover:*:font-semibold  *:px-4 *:py-2 min-w-36 space-y-2 translate-y-8  group-hover:visible group-hover:block group-hover:translate-y-4 transition *:transition duration-200 *:cursor-pointer rounded-md  border border-gray-300 invisible *:text-base overflow-hidden">
                     <li>
                       <Link to={"/"}>Social Development</Link>
                     </li>

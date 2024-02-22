@@ -1,8 +1,34 @@
 import womenEdu from "../../assets/womenEdu.jpg";
+
+import { motion } from "framer-motion";
+const animateVariant = {
+  initial: {
+    y: -100,
+    opacity: 0,
+  },
+
+  animate: (index) => ({
+    y: 0,
+    opacity: 1,
+
+    transition: {
+      duration: 1,
+      delay: 0.1 * index,
+    },
+  }),
+};
+
 const TopPriority = () => {
   return (
     <div className="my-20">
-      <div className="w-full my-container grid items-center md:grid-cols-2 gap-8">
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        custom={4}
+        variants={animateVariant}
+        viewport={{ once: false, amount: 0.5 }}
+        className="w-full my-container grid items-center md:grid-cols-2 gap-8"
+      >
         <div className="">
           <img
             src={womenEdu}
@@ -29,7 +55,7 @@ const TopPriority = () => {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
