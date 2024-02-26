@@ -22,12 +22,7 @@ const DonationDetails = () => {
         }}
       >
         <div className="my-container">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-            voluptas labore alias, temporibus numquam at assumenda natus ipsam
-            debitis repellendus reprehenderit dolores culpa eius optio
-            aspernatur earum nemo dicta pariatur?
-          </p>
+          <p className="py-8 text-center text-4xl font-medium">Coming soon!</p>
         </div>
       </motion.div>
     </div>

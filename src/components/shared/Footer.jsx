@@ -1,11 +1,18 @@
 import { CiCalendarDate } from "react-icons/ci";
 import { FaFacebook, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import footerImg from "../../assets/footerSvg.svg";
 import gallery from "../../assets/gallery.jpg";
+
 const Footer = () => {
   return (
-    <>
-      <div className="w-full bg-zinc-700 py-14 mt-6 px-3">
+    <div className="relative  pt-16 bg-[#142A31] mt-56">
+      <img
+        src={footerImg}
+        alt=""
+        className="w-full object-cover absolute top-0 left-0 xl:-translate-y-56 z-10 -translate-y-20 md:-translate-y-36"
+      />
+      <div className="w-full  mt-6 px-3  pt-4 z-30 pb-10">
         <div className="my-container grid gap-10 md:grid-cols-2 xl:grid-cols-3">
           <div>
             <h1 className="text-white mb-1 text-2xl font-semibold capitalize">
@@ -172,7 +179,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -12,6 +12,10 @@ import Container from "./Container";
 
 import { CgMenuLeft } from "react-icons/cg";
 import { IoCloseSharp } from "react-icons/io5";
+
+import { motion } from "framer-motion";
+import DonationBtn from "./buttons/DonationBtn";
+
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
 
@@ -52,7 +56,18 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="w-full bg-green-500 text-white py-3 px-2 hidden md:block">
+      <motion.div
+        initial={{
+          translateY: -100,
+        }}
+        animate={{
+          translateY: 0,
+        }}
+        transition={{
+          duration: 3,
+        }}
+        className="w-full bg-green-500 text-white py-3 px-2 hidden md:block"
+      >
         <Container>
           {/* ! navbar tob  */}
           <div className="*:flex *:items-center *:gap-2 *:text-md items-center justify-center gap-6 flex">
@@ -70,11 +85,21 @@ const Navbar = () => {
             </div>
           </div>
         </Container>
-      </div>
+      </motion.div>
 
       {/* navbar  */}
 
-      <nav
+      <motion.div
+        initial={{
+          translateY: 100,
+        }}
+        animate={{
+          translateY: 0,
+        }}
+        transition={{
+          duration: 2,
+          delay: 0.3,
+        }}
         className={`w-full shadow py-1 transition duration-500 ${
           scrolling
             ? "sticky top-0 left-0 z-50 bg-gradient-to-bl to-pink-50 from-amber-100 shadow-lg"
@@ -128,6 +153,14 @@ const Navbar = () => {
                 <li className="font-medium text-lg hover:text-primary-1 transition-colors">
                   <Link to={"/"}>Contact</Link>
                 </li>
+                <li className="font-medium text-lg hover:text-primary-1 transition-colors">
+                  <Link to={"/donation-details"}>
+                    <DonationBtn
+                      text="donate now"
+                      className="text-base py-2 px-3 font-medium"
+                    />
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -139,7 +172,7 @@ const Navbar = () => {
             />
           </div>
         </Container>
-      </nav>
+      </motion.div>
 
       {/* responsive sidebar  */}
 
