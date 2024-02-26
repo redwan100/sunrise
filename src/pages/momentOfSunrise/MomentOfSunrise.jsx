@@ -1,6 +1,6 @@
+import { motion } from "framer-motion";
 import momentImg from "../../assets/moment.jpg";
 import MomentOfSunriseCard from "./MomentOfSunriseCard";
-
 const moments = [
   {
     id: 565463,
@@ -29,8 +29,29 @@ const MomentOfSunrise = () => {
   return (
     <div className="w-full p-8">
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 my-container">
-        {moments.map((moment) => (
-          <MomentOfSunriseCard key={moment.id} moment={moment} />
+        {moments.map((moment, index) => (
+          <motion.div
+            initial={{
+              opacity: 0,
+              translateX: index % 2 === 0 ? -50 : 50,
+              translateY: index % 2 === 0 ? 50 : -50,
+              scale: 0.9,
+            }}
+            whileInView={{
+              opacity: 1,
+              translateY: 0,
+              translateX: 0,
+              scale: 1,
+            }}
+            transition={{
+              duration: 0.5,
+              staggerChildren: 0.6,
+            }}
+            viewport={{ once: false, amount: 0.5 }}
+            key={moment.id}
+          >
+            <MomentOfSunriseCard moment={moment} />
+          </motion.div>
         ))}
       </div>
     </div>

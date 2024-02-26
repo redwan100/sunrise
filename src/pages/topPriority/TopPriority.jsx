@@ -1,42 +1,53 @@
 import womenEdu from "../../assets/womenEdu.jpg";
 
 import { motion } from "framer-motion";
-const animateVariant = {
-  initial: {
-    y: -100,
-    opacity: 0,
-  },
-
-  animate: (index) => ({
-    y: 0,
-    opacity: 1,
-
-    transition: {
-      duration: 1,
-      delay: 0.1 * index,
-    },
-  }),
-};
 
 const TopPriority = () => {
   return (
     <div className="my-20">
-      <motion.div
-        initial="initial"
-        whileInView="animate"
-        custom={4}
-        variants={animateVariant}
-        viewport={{ once: false, amount: 0.5 }}
-        className="w-full my-container grid items-center md:grid-cols-2 gap-8"
-      >
-        <div className="">
+      <motion.div className="w-full my-container grid items-center md:grid-cols-2 gap-8">
+        <motion.div
+          initial={{
+            translateX: 100,
+            opacity: 0.3,
+          }}
+          whileInView={{
+            translateX: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          viewport={{
+            once: false,
+            amount: 0.5,
+          }}
+          className=""
+        >
           <img
             src={womenEdu}
             alt="women education"
             className="max-w-full rounded-md"
           />
-        </div>
-        <div className="space-y-3  h-max p-10 rounded-md bg-gradient-to-br from-lime-200 to-primary-1 border border-lime-300">
+        </motion.div>
+        <motion.div
+          initial={{
+            translateX: -100,
+            opacity: 0.1,
+          }}
+          whileInView={{
+            translateX: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          viewport={{
+            once: false,
+            amount: 0.5,
+          }}
+          className="space-y-3  h-max p-10 rounded-md bg-gradient-to-br from-lime-200 to-primary-1 border border-lime-300"
+        >
           <h1 className="text-2xl xl:text-3xl  font-semibold text-lime-900 text-center">
             WASH is a top priority for{" "}
             <span className=" text-lime-950">SUNRISE</span>
@@ -54,7 +65,7 @@ const TopPriority = () => {
               Read More
             </button>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );

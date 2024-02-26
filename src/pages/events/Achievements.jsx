@@ -6,7 +6,7 @@ const Achievements = () => {
       <div className=" my-4">
         <SectionTitle title="Awards & Achievements" />
       </div>
-      <div>
+      <div className="rounded-md overflow-hidden">
         <img src={achievement} alt="achievement" />
       </div>
     </div>

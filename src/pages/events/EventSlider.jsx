@@ -14,7 +14,11 @@ const EventSlider = () => {
       <div className="my-4">
         <SectionTitle title="recent events" />
       </div>
-      <Swiper autoplay={{ delay: 800 }} modules={[Autoplay]}>
+      <Swiper
+        autoplay={{ delay: 800 }}
+        modules={[Autoplay]}
+        className="rounded-md"
+      >
         <SwiperSlide>
           <img src={img1} alt="" />
         </SwiperSlide>

@@ -3,6 +3,7 @@ import "swiper/css/autoplay";
 // import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { motion } from "framer-motion";
 import slideImg from "../../assets/slide1.jpg";
 
 import { FaHandHoldingDollar } from "react-icons/fa6";
@@ -15,7 +16,24 @@ const Donation = () => {
       <div className="mb-8">
         <SectionTitle isCenter title="Donation" />
       </div>
-      <div className=" ">
+      <motion.div
+        initial={{
+          scale: 0.2,
+          opacity: 0.3,
+        }}
+        whileInView={{
+          scale: 1,
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+        viewport={{
+          once: false,
+          amount: 0.5,
+        }}
+        className="rounded-md overflow-hidden "
+      >
         <Swiper
           className="mySwiper"
           autoplay={{ delay: 1000 }}
@@ -36,7 +54,7 @@ const Donation = () => {
             />
           </SwiperSlide>
         </Swiper>
-      </div>
+      </motion.div>
       <div className="block mx-auto w-max mt-8 ">
         <Link
           to={"/donation-details"}
