@@ -17,7 +17,7 @@ body {
 }
 
 .cShadow {
-  box-shadow: 0px 0px 20px -7px rgba(48, 47, 47, 0.4);
+  box-shadow: 0px 0px 30px 0px rgba(48, 47, 47, 0.3);
 }
 
 .hoverEffect {

@@ -21,7 +21,7 @@ const Navbar = () => {
 
   const [selected, setSelected] = useState(null);
 
-  const [showNav, setShowNav] = useState(false);
+  const [showNav, setShowNav] = useState(true);
 
   const toggleNav = () => {
     setShowNav((prev) => !prev);
@@ -167,7 +167,7 @@ const Navbar = () => {
             {/* hamburger menu  */}
 
             <CgMenuLeft
-              className="xl:hidden text-3xl cursor-pointer hover:text-primary-1 transition-colors "
+              className="xl:hidden md:text-3xl text-xl cursor-pointer hover:text-primary-1 transition-colors "
               onClick={toggleNav}
             />
           </div>
