@@ -7,7 +7,7 @@ const MainLayout = () => {
   const { scrollYProgress } = useScroll();
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <motion.div
         style={{
           scaleY: scrollYProgress,
