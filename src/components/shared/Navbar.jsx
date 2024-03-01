@@ -174,7 +174,8 @@ const Navbar = () => {
         </Container>
       </motion.div>
 
-      {/* responsive sidebar  */}
+
+      {/* responsive mobile sidebar  */}
 
       <div
         className={`w-full h-full fixed top-0 right-0 transition duration-300 bg-slate-700/80 z-50 xl:hidden   ${
