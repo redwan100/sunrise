@@ -102,7 +102,7 @@ const Navbar = () => {
         }}
         className={`w-full shadow py-1 transition duration-500 ${
           scrolling
-            ? "sticky top-0 left-0 z-50 bg-gradient-to-bl to-pink-50 from-amber-100 shadow-lg"
+            ? "fixed top-0 left-0 z-50 bg-gradient-to-bl to-pink-50 from-amber-100 shadow-lg"
             : "bg-white"
         }`}
       >

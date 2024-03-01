@@ -9,7 +9,7 @@ import { Autoplay } from "swiper/modules";
 
 const Slider = () => {
   return (
-    <>
+    <div className="overflow-hidden">
       <Swiper
         className="mySwiper"
         autoplay={{ delay: 1000 }}
@@ -30,7 +30,7 @@ const Slider = () => {
           />
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 
