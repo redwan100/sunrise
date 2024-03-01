@@ -1,0 +1,43 @@
+.swiper-button-prev {
+  /* background: #1db856; */
+  border: 2px solid #1db856;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+}
+.swiper-button-prev:hover {
+  background: #1db856;
+}
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: bold;
+  padding: 14px !important;
+  color: #1db856;
+  transition: 0.4s ease-in-out;
+}
+.swiper-button-prev:hover::after {
+  color: white;
+}
+
+.swiper-button-next {
+  /* background: #1db856; */
+  border: 2px solid #1db856;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+}
+.swiper-button-next:hover {
+  background: #1db856;
+}
+.swiper-button-next::after {
+  font-size: 18px !important;
+  font-weight: bold;
+  padding: 14px !important;
+  color: #1db856;
+  transition: 0.4s ease-in-out;
+}
+.swiper-button-next:hover::after {
+  color: white;
+}

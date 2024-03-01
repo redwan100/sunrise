@@ -4,7 +4,6 @@ import "swiper/css/autoplay";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { motion } from "framer-motion";
-import slideImg from "../../assets/slide1.jpg";
 
 import { Link } from "react-router-dom";
 import { Autoplay } from "swiper/modules";
@@ -12,6 +11,13 @@ import SectionTitle from "../../components/shared/SectionTitle";
 import DonationBtn from "../../components/shared/buttons/DonationBtn";
 
 import { FaHandHoldingDollar } from "react-icons/fa6";
+
+import d1 from "../../assets/d1.jpg";
+import d2 from "../../assets/d2.jpg";
+import d3 from "../../assets/d3.jpg";
+import d4 from "../../assets/d4.jpg";
+
+const slideImg = [d1, d2, d3, d4];
 
 const Donation = () => {
   return (
@@ -42,20 +48,15 @@ const Donation = () => {
           autoplay={{ delay: 1000 }}
           modules={[Autoplay]}
         >
-          <SwiperSlide className="max-w-full">
-            <img
-              src={slideImg}
-              alt=""
-              className="w-full h-full max-h-[80vh] block object-cover "
-            />
-          </SwiperSlide>
-          <SwiperSlide className="max-w-full  ">
-            <img
-              src={slideImg}
-              alt=""
-              className="w-full h-full max-h-[80vh] block object-cover "
-            />
-          </SwiperSlide>
+          {slideImg.map((img) => (
+            <SwiperSlide className="max-w-full" key={img}>
+              <img
+                src={img}
+                alt=""
+                className="w-full h-full max-h-[80vh] block object-cover "
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </motion.div>
       <div className="block mx-auto w-max mt-8 ">
