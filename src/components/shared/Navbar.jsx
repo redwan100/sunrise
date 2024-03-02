@@ -108,7 +108,9 @@ const Navbar = () => {
       >
         <Container>
           <div className=" flex items-center gap-8 text-lg p-3 justify-between">
-            <img src={logo} alt="logo" className="xl:w-[5rem] w-[5rem]" />
+            <Link to={"/"}>
+              <img src={logo} alt="logo" className="xl:w-[5rem] w-[5rem]" />
+            </Link>
 
             {/* menu  */}
             <div className="hidden xl:block">
@@ -151,7 +153,7 @@ const Navbar = () => {
                 {/* drop down menu  */}
 
                 <li className="font-medium text-lg hover:text-primary-1 transition-colors">
-                  <Link to={"/"}>Contact</Link>
+                  <Link to={"/contact"}>Contact</Link>
                 </li>
                 <li className="font-medium text-lg hover:text-primary-1 transition-colors">
                   <Link to={"/donation-details"}>
@@ -174,8 +176,7 @@ const Navbar = () => {
         </Container>
       </motion.div>
 
-
-      {/* responsive mobile sidebar  */}
+      {/* TODO: responsive mobile sidebar  */}
 
       <div
         className={`w-full h-full fixed top-0 right-0 transition duration-300 bg-slate-700/80 z-50 xl:hidden   ${
