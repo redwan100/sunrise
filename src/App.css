@@ -41,3 +41,17 @@
 .swiper-button-next:hover::after {
   color: white;
 }
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1db856;
+  height: 10rem;
+  border-radius: 10px;
+}
