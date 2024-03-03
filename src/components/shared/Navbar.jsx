@@ -195,6 +195,10 @@ const Navbar = () => {
             <Link to={"/"}>Home</Link>
             {/* <hr className="h-[2px] bg-primary-1" /> */}
           </li>
+          <li className="text-lg font-medium border-b border-dashed border-primary-1">
+            <Link to={"/contact"}>Contact</Link>
+            {/* <hr className="h-[2px] bg-primary-1" /> */}
+          </li>
           <li className="overflow-hidden transition duration-500 ">
             <div
               onClick={() => toggleDropdown("about")}
@@ -218,6 +222,16 @@ const Navbar = () => {
               <li>page 4</li>
               <li>page 5</li>
             </ul>
+          </li>
+
+          <li className="text-lg font-medium">
+            <Link to={"/donation-details"}>
+              <DonationBtn
+                text="donate now"
+                className="text-base py-2 px-3 font-medium w-[10rem] justify-center"
+              />
+            </Link>
+            {/* <hr className="h-[2px] bg-primary-1" /> */}
           </li>
         </ul>
       </div>
