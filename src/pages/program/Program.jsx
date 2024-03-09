@@ -37,8 +37,12 @@ const programData = [
 const Program = () => {
   return (
     <div className="w-full my-8 py-4 my-container">
-      <div className="mb-8">
-        <SectionTitle isCenter title="special program" />
+      <div className="">
+        <SectionTitle
+          isCenter
+          title="special program"
+          className="text-center py-10"
+        />
       </div>
       <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 max-w-sm mx-auto sm:max-w-full">
         {programData?.map((item, index) => (

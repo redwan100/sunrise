@@ -32,8 +32,8 @@ const newses = [
 const News = () => {
   return (
     <div className="my-container">
-      <div className="py-4 mb-8">
-        <SectionTitle isCenter title="latest news" />
+      <div className="py-4">
+        <SectionTitle title="latest news" className="text-center pb-3" />
       </div>
       <div className="grid gap-7 sm:gap-5 sm:grid-cols-2 md:grid-cols-3 items-center">
         {newses.map((news, index) => (

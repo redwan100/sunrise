@@ -23,7 +23,11 @@ const Donation = () => {
   return (
     <div className="w-full my-container py-8">
       <div className="mb-8">
-        <SectionTitle isCenter title="Donation" />
+        <SectionTitle
+          isCenter
+          title="Help poor people"
+          className="text-center"
+        />
       </div>
       <motion.div
         initial={{

@@ -25,7 +25,7 @@ const Contact = () => {
       <div className="">
         <div className="my-container">
           <div className="mb-8">
-            <SectionTitle title="contact information" isCenter />
+            <SectionTitle title="contact information" className="text-center" />
           </div>
           <div className="grid gap-10 md:gap-6 md:grid-cols-[1fr_2fr]">
             <div className="space-y-3 p-4 rounded-md bg-gradient-to-tr from-pink-100 to-violet-100">
@@ -52,16 +52,16 @@ const Contact = () => {
             </div>
 
             {/* contact */}
-            <div className=" space-y-4">
+            <div className=" space-y-4 bg-gray-200 p-4 rounded-md">
               <div className="relative">
                 <input
                   type="text"
                   name="name"
                   id="name"
-                  className="w-full h-10 border border-green-300 rounded-md focus:border-green-500 focus:outline-none px-2 focus:border-2"
-                  placeholder="Your name"
+                  className="w-full h-10 rounded-md  px-2 bg-slate-500 placeholder:text-gray-200 text-gray-100 pl-8  focus:outline-offset-2 outline-slate-600"
+                  placeholder="Name"
                 />
-                <FaRegUser className="absolute top-3 right-3 text-gray-400" />
+                <FaRegUser className="absolute top-3 left-3 text-gray-100" />
               </div>
 
               <div className="relative">
@@ -69,10 +69,10 @@ const Contact = () => {
                   type="text"
                   name="name"
                   id="name"
-                  className="w-full h-10 border border-green-300 rounded-md focus:border-green-500 focus:outline-none px-2 focus:border-2"
-                  placeholder="Your email"
+                  className="w-full h-10 rounded-md  px-2 bg-slate-500 placeholder:text-gray-200 text-gray-100 pl-8  focus:outline-offset-2 outline-slate-600 "
+                  placeholder="Email"
                 />
-                <MdOutlineEmail className="absolute top-3 right-3 text-gray-400" />
+                <MdOutlineEmail className="absolute top-3 left-3 text-gray-200" />
               </div>
 
               <div>
@@ -80,13 +80,13 @@ const Contact = () => {
                   name=""
                   rows="8"
                   placeholder="Your Message"
-                  className="w-full border border-green-300 rounded-md focus:border-green-500 focus:outline-none px-2 focus:border-2 py-2"
+                  className="w-full rounded-md px-2  py-2 bg-slate-500 text-gray-100 placeholder:text-gray-100 focus:outline-offset-2 outline-slate-600 "
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="bg-primary-1 hover:bg-primary-1/90 transition py-2 px-3 rounded-md text-white sm:w-max w-full uppercase font-medium tracking-wider  focus:ring-2 focus:ring-offset-2 ring-primary-1 flex items-center gap-2 justify-center"
+                className="bg-slate-500 hover:bg-slate-500 transition py-2 px-3 rounded-md text-white sm:w-max w-full uppercase font-medium tracking-wider  focus:ring-2 focus:ring-offset-2 ring-slate-900 flex items-center gap-2 justify-center"
               >
                 send message <IoIosSend className="text-2xl" />
               </button>

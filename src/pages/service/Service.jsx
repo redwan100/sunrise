@@ -5,6 +5,7 @@ import { MdHomeWork } from "react-icons/md";
 import ServiceCard from "./ServiceCard";
 
 import { motion } from "framer-motion";
+import SectionTitle from "../../components/shared/SectionTitle";
 
 const services = [
   {
@@ -34,12 +35,10 @@ const Service = () => {
     <div className="my-container py-8">
       <div className="p-4">
         <div>
-          <h1
-            className="text-center text-4xl sm:text-3xl md:text-4xl
-         font-medium text-primary-1 mb-7"
-          >
-            Providing inclusive financial services
-          </h1>
+          <SectionTitle
+            title="Providing inclusive financial services"
+            className="py-5"
+          />
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">

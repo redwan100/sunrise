@@ -1,11 +1,16 @@
-const SectionTitle = ({ title = "section title", isCenter = false }) => {
+import cn from "../../utils/cn";
+
+const SectionTitle = ({ title = "section title", className }) => {
   return (
-    <div
-      className={`text-4xl font-medium text-primary-1 capitalize ${
-        isCenter ? "text-center" : "text-left"
-      }`}
-    >
-      {title}
+    <div className="text-3xl md:text-5xl font-bold">
+      <h1
+        className={cn(
+          `bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-slate-400 capitalize`,
+          className
+        )}
+      >
+        {title}
+      </h1>
     </div>
   );
 };
