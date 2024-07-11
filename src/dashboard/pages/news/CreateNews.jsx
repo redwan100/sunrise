@@ -1,28 +1,48 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
+import { useCreateNewsMutation } from '../../../redux/features/news/newsApi';
 
 const CreateNews = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
   const [date, setDate] = useState('');
+  const [imagePreview, setImagePreview] = useState(null);
+  const navigate = useNavigate();
+
+  const [createNews] = useCreateNewsMutation();
 
   const handleImageChange = (e) => {
     // setImage(e.target.files[0])
-    setImage(e.target.files[0]?.name);
+    setImage(e.target.files[0]);
+    setImagePreview(URL.createObjectURL(e.target.files[0]));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData();
 
     const data = {
       title,
-      description
+      description,
+      date
     };
 
-    formData.append('data', JSON.stringify(data));
     formData.append('image', image);
+    formData.append('data', JSON.stringify(data));
+
+    try {
+      const res = await createNews(formData).unwrap();
+
+      if (res?.success) {
+        toast.success(res?.message);
+        navigate('/dashboard/all-news');
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -61,7 +81,7 @@ const CreateNews = () => {
           <label
             className="block text-gray-700 font-bold mb-2 border border-dashed p-3"
             htmlFor="image">
-            Image
+            Upload Image
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-6 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -71,6 +91,12 @@ const CreateNews = () => {
             onChange={handleImageChange}
           />
         </div>
+
+        {imagePreview && (
+          <div className="mb-4">
+            <img src={imagePreview} alt={image} className="w-full max-w-xs" />
+          </div>
+        )}
 
         <div className="mb-4">
           <label className="block text-gray-700 font-bold mb-2" htmlFor="date">
