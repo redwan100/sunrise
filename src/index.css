@@ -8,7 +8,7 @@
 
 body {
   @apply bg-gray-50;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .my-container {
   @apply container mx-auto sm:max-w-[80%] w-full px-4 md:px-1;

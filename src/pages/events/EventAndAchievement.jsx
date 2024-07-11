@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import Achievements from "./Achievements";
-import EventSlider from "./EventSlider";
+import { motion } from 'framer-motion';
+import Achievements from './Achievements';
+import EventSlider from './EventSlider';
 
 const EventAndAchievement = () => {
   return (
@@ -9,18 +9,18 @@ const EventAndAchievement = () => {
         <motion.div
           initial={{
             translateX: -100,
-            opacity: 0.3,
+            opacity: 0.3
           }}
           whileInView={{
             translateX: 0,
-            opacity: 1,
+            opacity: 1
           }}
           transition={{
-            duration: 0.5,
+            duration: 0.5
           }}
           viewport={{
             once: false,
-            amount: 0.5,
+            amount: 0.5
           }}
           className="w-full overflow-hidden"
         >
@@ -29,18 +29,18 @@ const EventAndAchievement = () => {
         <motion.div
           initial={{
             translateX: 100,
-            opacity: 0.3,
+            opacity: 0.3
           }}
           whileInView={{
             translateX: 0,
-            opacity: 1,
+            opacity: 1
           }}
           transition={{
-            duration: 0.5,
+            duration: 0.5
           }}
           viewport={{
             once: false,
-            amount: 0.5,
+            amount: 0.5
           }}
         >
           <Achievements />

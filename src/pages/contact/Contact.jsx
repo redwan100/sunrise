@@ -1,24 +1,24 @@
-import { motion } from "framer-motion";
-import { FaRegUser } from "react-icons/fa";
-import { IoIosSend } from "react-icons/io";
-import { MdOutlineEmail } from "react-icons/md";
-import SectionTitle from "../../components/shared/SectionTitle";
+import { motion } from 'framer-motion';
+import { FaRegUser } from 'react-icons/fa';
+import { IoIosSend } from 'react-icons/io';
+import { MdOutlineEmail } from 'react-icons/md';
+import SectionTitle from '../../components/shared/SectionTitle';
 const Contact = () => {
   return (
     <motion.div
       initial={{
         x: 100,
-        opacity: 0,
+        opacity: 0
       }}
       animate={{
         x: 0,
-        opacity: 1,
+        opacity: 1
       }}
       transition={{
         duration: 1,
         opacity: {
-          ease: "linear",
-        },
+          ease: 'linear'
+        }
       }}
       className="w-full bg-white py-6"
     >
@@ -30,23 +30,15 @@ const Contact = () => {
           <div className="grid gap-10 md:gap-6 md:grid-cols-[1fr_2fr]">
             <div className="space-y-3 p-4 rounded-md bg-gradient-to-tr from-pink-100 to-violet-100">
               <p>
-                <span className="text-gray-700 text-lg font-semibold ">
-                  Address:
-                </span>
-                <span className="text-gray-600 ml-1">
-                  Banani, Dhhaka Bangladesh
-                </span>
+                <span className="text-gray-700 text-lg font-semibold ">Address:</span>
+                <span className="text-gray-600 ml-1">Banani, Dhhaka Bangladesh</span>
               </p>
               <p>
-                <span className="text-gray-700 text-lg font-semibold ">
-                  E-mail:
-                </span>
+                <span className="text-gray-700 text-lg font-semibold ">E-mail:</span>
                 <span className="text-gray-600 ml-1">example@email.com</span>
               </p>
               <p>
-                <span className="text-gray-700 text-lg font-semibold ">
-                  Call:
-                </span>
+                <span className="text-gray-700 text-lg font-semibold ">Call:</span>
                 <span className="text-gray-600 ml-1">0123456789</span>
               </p>
             </div>

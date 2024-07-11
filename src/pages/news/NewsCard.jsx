@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { CiCalendarDate } from "react-icons/ci";
+import { useState } from 'react';
+import { CiCalendarDate } from 'react-icons/ci';
 
 const NewsCard = ({ news }) => {
   const [showText, setShowText] = useState(false);
@@ -32,9 +32,7 @@ const NewsCard = ({ news }) => {
             ) : (
               <>
                 <p className="text-gray-700 text-sm sm:text-base">
-                  {subtitle.length > 100 && (
-                    <span>{subtitle.slice(1, 100)}...</span>
-                  )}
+                  {subtitle.length > 100 && <span>{subtitle.slice(1, 100)}...</span>}
                 </p>
               </>
             )}
@@ -47,7 +45,7 @@ const NewsCard = ({ news }) => {
               onClick={toggleText}
               className=" py-1  px-2 rounded-sm capitalize font-medium border-primary-1 border  text-primary-1 text-sm transition-all hover:text-gray-100 hover:bg-primary-1"
             >
-              {showText ? "read less" : "read more"}
+              {showText ? 'read less' : 'read more'}
             </button>
           </div>
         </div>

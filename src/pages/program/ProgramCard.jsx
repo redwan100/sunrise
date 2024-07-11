@@ -1,5 +1,5 @@
-import { IoIosArrowRoundForward } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { IoIosArrowRoundForward } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 const ProgramCard = ({ program }) => {
   const { title, img } = program;
@@ -17,7 +17,7 @@ const ProgramCard = ({ program }) => {
         <h1 className="text-xl text-gray-700 font-semibold mb-1">{title}</h1>
 
         <Link
-          to={"/"}
+          to={'/'}
           className="transition hover:text-primary-1 inline-flex items-center font-semibold text-sm bg-primary-1/10 py-2 px-4  rounded-sm text-primary-1 hover:bg-primary-1/20 ml-auto "
         >
           Read More <IoIosArrowRoundForward className="text-xl " />

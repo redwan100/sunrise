@@ -1,6 +1,6 @@
-import cn from "../../utils/cn";
+import cn from '../../utils/cn';
 
-const SectionTitle = ({ title = "section title", className }) => {
+const SectionTitle = ({ title = 'section title', className }) => {
   return (
     <div className="text-3xl md:text-5xl font-bold">
       <h1

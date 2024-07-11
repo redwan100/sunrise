@@ -1,5 +1,5 @@
-import achievement from "../../assets/achievement.jpg";
-import SectionTitle from "../../components/shared/SectionTitle";
+import achievement from '../../assets/achievement.jpg';
+import SectionTitle from '../../components/shared/SectionTitle';
 const Achievements = () => {
   return (
     <div>

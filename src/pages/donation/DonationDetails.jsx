@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 const DonationDetails = () => {
   return (
     <div className="py-8">
@@ -6,19 +6,19 @@ const DonationDetails = () => {
         initial={{
           translateX: 300,
 
-          opacity: 0.3,
+          opacity: 0.3
         }}
         animate={{
           translateX: 0,
 
-          opacity: 1,
+          opacity: 1
         }}
         transition={{
-          duration: 1,
+          duration: 1
         }}
         viewport={{
           once: false,
-          amount: 0.5,
+          amount: 0.5
         }}
       >
         <div className="my-container">

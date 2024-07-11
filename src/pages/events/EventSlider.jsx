@@ -1,12 +1,12 @@
-import img1 from "../../assets/slide1.jpg";
+import img1 from '../../assets/slide1.jpg';
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import "swiper/css";
+import 'swiper/css';
 // import required modules
-import { Autoplay } from "swiper/modules";
-import SectionTitle from "../../components/shared/SectionTitle";
+import { Autoplay } from 'swiper/modules';
+import SectionTitle from '../../components/shared/SectionTitle';
 
 const EventSlider = () => {
   return (
@@ -14,11 +14,7 @@ const EventSlider = () => {
       <div className="my-4">
         <SectionTitle title="recent events" />
       </div>
-      <Swiper
-        autoplay={{ delay: 800 }}
-        modules={[Autoplay]}
-        className="rounded-md"
-      >
+      <Swiper autoplay={{ delay: 800 }} modules={[Autoplay]} className="rounded-md">
         <SwiperSlide>
           <img src={img1} alt="" />
         </SwiperSlide>
