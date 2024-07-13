@@ -47,6 +47,26 @@ const sidebarItems = [
   },
   {
     id: uuidv4(),
+    title: 'Home Slider',
+    path: 'home-slider',
+    icon: <HiBookmark />,
+    children: [
+      {
+        id: uuidv4(),
+        title: 'Create',
+        path: 'create-homeslider',
+        icon: <HiBookmark />
+      },
+      {
+        id: uuidv4(),
+        title: 'All Program',
+        path: 'all-program',
+        icon: <HiBookmark />
+      }
+    ]
+  },
+  {
+    id: uuidv4(),
     title: 'Login',
     path: '/dasboard/contact',
     icon: <HiBookmark />

@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../App';
 import Dashboard from '../dashboard/Dashboard';
+import CreateHomeSlider from '../dashboard/pages/home-slider/CreateHomeSlider';
 import AllNews from '../dashboard/pages/news/AllNews';
 import CreateNews from '../dashboard/pages/news/CreateNews';
 import AllProgram from '../dashboard/pages/program/AllProgram';
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/:programId',
         element: <UpdateProgram />
+      },
+      {
+        path: '/dashboard/create-homeslider',
+        element: <CreateHomeSlider />
       }
     ]
   }
