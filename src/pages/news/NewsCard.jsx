@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { CiCalendarDate } from 'react-icons/ci';
 
 const NewsCard = ({ news }) => {
@@ -43,8 +43,7 @@ const NewsCard = ({ news }) => {
             </span>
             <button
               onClick={toggleText}
-              className=" py-1  px-2 rounded-sm capitalize font-medium border-primary-1 border  text-primary-1 text-sm transition-all hover:text-gray-100 hover:bg-primary-1"
-            >
+              className=" py-1  px-2 rounded-sm capitalize font-medium border-primary-1 border  text-primary-1 text-sm transition-all hover:text-gray-100 hover:bg-primary-1">
               {showText ? 'read less' : 'read more'}
             </button>
           </div>

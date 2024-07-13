@@ -1,20 +1,25 @@
 import React from 'react';
 import { toast } from 'sonner';
-import NewsTable from '../../../components/dashboard/news/Table';
-import { useDeleteNewsMutation, useGetAllNewsQuery } from '../../../redux/features/news/newsApi';
+import ProgramTable from '../../../components/dashboard/program/ProgramTable';
+import {
+  useAllProgramQuery,
+  useDeleteProgramMutation
+} from '../../../redux/features/program/programApi';
 
-const AllNews = () => {
-  const { data: tableData, isLoading } = useGetAllNewsQuery();
-  const [deleteNews] = useDeleteNewsMutation();
+const AllProgram = () => {
+  const { data: tableData, isLoading } = useAllProgramQuery();
+  const [deleteNews] = useDeleteProgramMutation();
 
   const handleDelete = async (id) => {
     try {
       const res = await deleteNews(id).unwrap();
+      console.log(res);
       if (res?.success) {
         toast.success(res?.message);
       }
     } catch (error) {
       console.log(error);
+      toast.error('Failed to delete news');
     }
   };
 
@@ -28,7 +33,7 @@ const AllNews = () => {
       {!isLoading ? (
         <>
           <h1 className="text-2xl font-bold mb-4 text-center">All News</h1>
-          <NewsTable data={tableData} onDelete={handleDelete} onUpdate={handleUpdate} />
+          <ProgramTable data={tableData} onDelete={handleDelete} onUpdate={handleUpdate} />
         </>
       ) : (
         <>
@@ -39,4 +44,4 @@ const AllNews = () => {
   );
 };
 
-export default AllNews;
+export default AllProgram;

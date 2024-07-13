@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { BiPlus } from 'react-icons/bi';
 import { HiBookmark } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
@@ -27,14 +27,20 @@ const sidebarItems = [
   },
   {
     id: uuidv4(),
-    title: 'Products',
-    path: 'products',
+    title: 'Program',
+    path: 'program',
     icon: <HiBookmark />,
     children: [
       {
         id: uuidv4(),
-        title: 'Sub Item 1',
-        path: 'sub-item-1',
+        title: 'Create',
+        path: 'create-program',
+        icon: <HiBookmark />
+      },
+      {
+        id: uuidv4(),
+        title: 'All Program',
+        path: 'all-program',
         icon: <HiBookmark />
       }
     ]
@@ -63,16 +69,14 @@ const Sidebar = () => {
         {item.children ? (
           <button
             onClick={() => toggleItem(item.id)}
-            className="flex items-center text-gray-600 hover:text-gray-800 transition duration-300 focus:outline-none"
-          >
+            className="flex items-center text-gray-600 hover:text-gray-800 transition duration-300 focus:outline-none">
             {item.icon}
             <span className="ml-2">{item.title}</span>
           </button>
         ) : (
           <Link
             to={item.path}
-            className="flex items-center text-gray-600 hover:text-gray-800 transition duration-300"
-          >
+            className="flex items-center text-gray-600 hover:text-gray-800 transition duration-300">
             {item.icon}
             <span className="ml-2">{item.title}</span>
           </Link>

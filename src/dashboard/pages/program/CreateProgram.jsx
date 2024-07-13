@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
-import { useCreateNewsMutation } from '../../../redux/features/news/newsApi';
-const CreateNews = () => {
+import { useCreateProgramMutation } from '../../../redux/features/program/programApi';
+const CreateProgram = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState('');
@@ -10,7 +10,7 @@ const CreateNews = () => {
   const [imagePreview, setImagePreview] = useState(null);
   const navigate = useNavigate();
 
-  const [createNews] = useCreateNewsMutation();
+  const [createNews] = useCreateProgramMutation();
 
   const handleImageChange = (e) => {
     // setImage(e.target.files[0])
@@ -37,7 +37,7 @@ const CreateNews = () => {
 
       if (res?.success) {
         toast.success(res?.message);
-        navigate('/dashboard/all-news');
+        navigate('/dashboard/all-program');
       }
     } catch (error) {
       console.log(error);
@@ -123,4 +123,4 @@ const CreateNews = () => {
   );
 };
 
-export default CreateNews;
+export default CreateProgram;

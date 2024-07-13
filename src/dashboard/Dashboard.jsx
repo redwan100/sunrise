@@ -1,13 +1,14 @@
+import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 
 const Dashboard = () => {
   return (
     // ! dasboard design
-    <div className="w-full h-screen">
+    <div className="w-full min-h-screen h-full">
       <div className="w-full h-full grid grid-cols-[8rem_1fr]">
         {/* ! sidebar */}
-        <aside className="bg-pink-300">
+        <aside className="bg-pink-300 min-h-screen">
           <h3>Dashboard</h3>
           <div>
             <Sidebar />
@@ -16,10 +17,6 @@ const Dashboard = () => {
         {/* ! sidebar */}
 
         <div className="w-full left-[10rem]">
-          {/* navbar  */}
-          <div className="shadow-md w-full h-max px-3 py-4">navbar</div>
-          {/* navbar  */}
-
           {/* main content  */}
           <div className="w-full p-2">
             <Outlet />
