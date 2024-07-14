@@ -1,40 +1,13 @@
 import { motion } from 'framer-motion';
-import pImg1 from '../../assets/program1.jpg';
-import pImg2 from '../../assets/program2.jpg';
 import SectionTitle from '../../components/shared/SectionTitle';
 import ProgramCard from './ProgramCard';
-const programData = [
-  {
-    id: 23,
-    title: 'SSS-Poura Ideal High School',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vero velit repellendus expedita asperiores nulla non totam ipsam maxime quaerat, ullam soluta vel earum, porro quibusdam consectetur voluptatum at nihil!',
-    img: pImg1
-  },
-  {
-    id: 253,
-    title: 'SSS Non-Govt. Polytechnic Institute',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vero velit repellendus expedita asperiores nulla non totam ipsam maxime quaerat, ullam soluta vel earum, porro quibusdam consectetur voluptatum at nihil!',
-    img: pImg2
-  },
-  {
-    id: 263,
-    title: 'SSS-Poura Ideal High School',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vero velit repellendus expedita asperiores nulla non totam ipsam maxime quaerat, ullam soluta vel earum, porro quibusdam consectetur voluptatum at nihil!',
-    img: pImg1
-  },
-  {
-    id: 2386,
-    title: 'SSS Non-Govt. Polytechnic Institute',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, vero velit repellendus expedita asperiores nulla non totam ipsam maxime quaerat, ullam soluta vel earum, porro quibusdam consectetur voluptatum at nihil!',
-    img: pImg2
-  }
-];
+
+import React from 'react';
+import { useAllProgramQuery } from '../../redux/features/program/programApi';
 
 const Program = () => {
+  const { data: programData } = useAllProgramQuery();
+  console.log(programData);
   return (
     <div className="w-full my-8 py-4 my-container">
       <div className="">
@@ -60,9 +33,8 @@ const Program = () => {
               staggerChildren: 0.6
             }}
             viewport={{ once: false, amount: 0.5 }}
-            key={item.id}
-          >
-            <ProgramCard key={item.id} program={item} />
+            key={item.id}>
+            <ProgramCard key={item._id} program={item} />
           </motion.div>
         ))}
       </div>

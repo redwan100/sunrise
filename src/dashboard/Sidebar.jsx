@@ -47,6 +47,26 @@ const sidebarItems = [
   },
   {
     id: uuidv4(),
+    title: 'Recent Event',
+    path: 'recent-event',
+    icon: <HiBookmark />,
+    children: [
+      {
+        id: uuidv4(),
+        title: 'Create',
+        path: 'create-recent-event',
+        icon: <HiBookmark />
+      },
+      {
+        id: uuidv4(),
+        title: 'All Event',
+        path: 'all-recent-event',
+        icon: <HiBookmark />
+      }
+    ]
+  },
+  {
+    id: uuidv4(),
     title: 'Home Slider',
     path: 'home-slider',
     icon: <HiBookmark />,
@@ -59,8 +79,28 @@ const sidebarItems = [
       },
       {
         id: uuidv4(),
-        title: 'All Program',
-        path: 'all-program',
+        title: 'All Slider',
+        path: 'all-homeslider',
+        icon: <HiBookmark />
+      }
+    ]
+  },
+  {
+    id: uuidv4(),
+    title: 'Help People',
+    path: 'poor-people',
+    icon: <HiBookmark />,
+    children: [
+      {
+        id: uuidv4(),
+        title: 'Create',
+        path: 'create-poor-people',
+        icon: <HiBookmark />
+      },
+      {
+        id: uuidv4(),
+        title: 'All People',
+        path: 'all-poor-people',
         icon: <HiBookmark />
       }
     ]

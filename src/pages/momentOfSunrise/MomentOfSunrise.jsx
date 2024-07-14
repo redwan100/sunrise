@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
+import React from 'react';
 import momentImg from '../../assets/moment.jpg';
+import SectionTitle from '../../components/shared/SectionTitle';
 import MomentOfSunriseCard from './MomentOfSunriseCard';
 const moments = [
   {
@@ -25,6 +27,9 @@ const moments = [
 const MomentOfSunrise = () => {
   return (
     <div className="w-full p-8">
+      <div className="w-max mx-auto pb-8 pt-2">
+        <SectionTitle title="Moment Of Sunrise" />
+      </div>
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 my-container">
         {moments.map((moment, index) => (
           <motion.div
@@ -45,8 +50,7 @@ const MomentOfSunrise = () => {
               staggerChildren: 0.6
             }}
             viewport={{ once: false, amount: 0.5 }}
-            key={moment.id}
-          >
+            key={moment.id}>
             <MomentOfSunriseCard moment={moment} />
           </motion.div>
         ))}

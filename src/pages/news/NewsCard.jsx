@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { CiCalendarDate } from 'react-icons/ci';
+import dateFormatter from '../../utils/dateFormatter';
 
 const NewsCard = ({ news }) => {
   const [showText, setShowText] = useState(false);
-  const { img, title, subtitle, date } = news;
+  const { image, title, description, date } = news;
 
   const toggleText = () => {
     setShowText((prev) => !prev);
@@ -11,12 +12,12 @@ const NewsCard = ({ news }) => {
 
   return (
     <>
-      <div className="w-full max-w-sm mx-auto sm:max-w-full border border-green-200 cShadow rounded-md overflow-hidden p-3 hover:bg-gradient-to-bl from-lime-100 to-green-200 transition group bg-white">
+      <div className="w-full max-w-sm mx-auto sm:max-w-full border border-green-200 cShadow rounded-md overflow-hidden p-3  transition group bg-white">
         <div className=" rounded-[8px] overflow-hidden ">
           <img
-            src={img}
+            src={image}
             alt="news image"
-            className="max-w-full w-full  group-hover:scale-105 transition"
+            className="max-w-full w-full max-h-[12rem] h-full object-cover  group-hover:scale-105 transition"
           />
         </div>
         <div className="p-3">
@@ -26,20 +27,24 @@ const NewsCard = ({ news }) => {
             {showText ? (
               <>
                 <p className="text-gray-700 text-sm sm:text-base">
-                  <span>{subtitle}</span>
+                  <span>{description}</span>
                 </p>
               </>
             ) : (
               <>
                 <p className="text-gray-700 text-sm sm:text-base">
-                  {subtitle.length > 100 && <span>{subtitle.slice(1, 100)}...</span>}
+                  {description?.length > 100 ? (
+                    <span>{description.slice(0, 100)}...</span>
+                  ) : (
+                    description
+                  )}
                 </p>
               </>
             )}
           </div>
           <div className="flex  justify-between items-center my-2">
-            <span className="font-semibold text-gray-600 text-sm flex items-center gap-1">
-              <CiCalendarDate className="text-gray-700" /> {date}
+            <span className="font-medium  text-gray-500 text-xs flex items-center gap-1">
+              <CiCalendarDate className="text-gray-700" /> {dateFormatter(date)}
             </span>
             <button
               onClick={toggleText}

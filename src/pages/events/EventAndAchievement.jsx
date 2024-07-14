@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import React from 'react';
 import Achievements from './Achievements';
 import EventSlider from './EventSlider';
 
@@ -22,8 +23,7 @@ const EventAndAchievement = () => {
             once: false,
             amount: 0.5
           }}
-          className="w-full overflow-hidden"
-        >
+          className="w-full overflow-hidden">
           <EventSlider />
         </motion.div>
         <motion.div
@@ -41,8 +41,7 @@ const EventAndAchievement = () => {
           viewport={{
             once: false,
             amount: 0.5
-          }}
-        >
+          }}>
           <Achievements />
         </motion.div>
       </div>

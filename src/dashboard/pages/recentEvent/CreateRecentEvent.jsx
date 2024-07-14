@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { toast } from 'sonner';
-import { useCreateHomeSliderMutation } from '../../../redux/features/homeSlider/homeSliderApi';
 
 import { useNavigate } from 'react-router-dom';
+import { useCreateRecentEventMutation } from '../../../redux/features/recentEvent/recentEventApi';
 
-const CreateHomeSlider = () => {
-  const [createHomeSlider, { isLoading }] = useCreateHomeSliderMutation();
+const CreateRecentEvent = () => {
+  const [createRecentEvent, { isLoading }] = useCreateRecentEventMutation();
   const [images, setImages] = useState([]);
 
   const navigate = useNavigate();
@@ -21,11 +21,11 @@ const CreateHomeSlider = () => {
       for (let i = 0; i < images.length; i++) {
         formData.append('image', images[i]);
       }
-      const res = await createHomeSlider(formData).unwrap();
+      const res = await createRecentEvent(formData).unwrap();
       if (res?.success) {
         toast.success(res?.message);
         setImages([]);
-        navigate('/dashboard/all-homeslider');
+        navigate('/dashboard/all-recent-event');
       }
     } catch (error) {
       console.log(error);
@@ -54,11 +54,11 @@ const CreateHomeSlider = () => {
           type="submit"
           disabled={images.length === 0 || isLoading}
           className={`w-full bg-purple-400 hover:bg-purple-500 transition py-2 px-1 rounded-md text-white ${images.length == 0 && 'bg-gray-400 cursor-not-allowed hover:bg-gray-500'}`}>
-          {isLoading ? 'Creating...' : 'Create Slider'}
+          {isLoading ? 'Creating...' : 'Create Event'}
         </button>
       </form>
     </div>
   );
 };
 
-export default CreateHomeSlider;
+export default CreateRecentEvent;

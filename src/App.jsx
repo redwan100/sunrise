@@ -1,5 +1,5 @@
 // import EventAndAchievement from "./components/events/EventAndAchievement";
-
+import React from 'react';
 import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import Slider from './components/slider/Slider';
 import Donation from './pages/donation/Donation';
