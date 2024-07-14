@@ -1,37 +1,20 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import momentImg from '../../assets/moment.jpg';
+
 import SectionTitle from '../../components/shared/SectionTitle';
+import { useGetAllMomentQuery } from '../../redux/features/momentOfSunrise/momentOfSunriseApi';
 import MomentOfSunriseCard from './MomentOfSunriseCard';
-const moments = [
-  {
-    id: 565463,
-    title: 'TMSS Public School and College Hosts Annual Inter-House Sports Competition 2024',
-    date: 'january 2024',
-    img: momentImg
-  },
-  {
-    id: 56785463,
-    title: 'TMSS Public School and College Hosts Annual Inter-House Sports Competition 2024',
-    date: 'january 2024',
-    img: momentImg
-  },
-  {
-    id: 565657463,
-    title: 'TMSS Public School and College Hosts Annual Inter-House Sports Competition 2024',
-    date: 'january 2024',
-    img: momentImg
-  }
-];
 
 const MomentOfSunrise = () => {
+  const { data: moments } = useGetAllMomentQuery();
+
   return (
     <div className="w-full p-8">
       <div className="w-max mx-auto pb-8 pt-2">
         <SectionTitle title="Moment Of Sunrise" />
       </div>
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 my-container">
-        {moments.map((moment, index) => (
+        {moments?.map((moment, index) => (
           <motion.div
             initial={{
               opacity: 0,

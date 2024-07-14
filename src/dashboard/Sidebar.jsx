@@ -107,6 +107,26 @@ const sidebarItems = [
   },
   {
     id: uuidv4(),
+    title: 'Moment',
+    path: 'moment',
+    icon: <HiBookmark />,
+    children: [
+      {
+        id: uuidv4(),
+        title: 'Create',
+        path: 'create-moment',
+        icon: <HiBookmark />
+      },
+      {
+        id: uuidv4(),
+        title: 'All Moment',
+        path: 'all-moment',
+        icon: <HiBookmark />
+      }
+    ]
+  },
+  {
+    id: uuidv4(),
     title: 'Login',
     path: '/dasboard/contact',
     icon: <HiBookmark />

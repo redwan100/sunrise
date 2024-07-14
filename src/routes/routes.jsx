@@ -13,6 +13,8 @@ import CreateProgram from '../dashboard/pages/program/CreateProgram';
 import UpdateProgram from '../dashboard/pages/program/UpdateProgram';
 import AllRecentEvent from '../dashboard/pages/recentEvent/AllRecentEvent';
 
+import AllMoment from '../dashboard/pages/momentOfSunrise/AllMoment';
+import CreateMoment from '../dashboard/pages/momentOfSunrise/CreateMoment';
 import CreateRecentEvent from '../dashboard/pages/recentEvent/CreateRecentEvent';
 import MainLayout from '../Layouts/MainLayout';
 import About from '../pages/About';
@@ -89,6 +91,14 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/all-poor-people',
         element: <AllHelpPoorPeople />
+      },
+      {
+        path: '/dashboard/all-moment',
+        element: <AllMoment />
+      },
+      {
+        path: '/dashboard/create-moment',
+        element: <CreateMoment />
       }
     ]
   }
