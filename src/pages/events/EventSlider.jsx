@@ -20,7 +20,7 @@ const EventSlider = () => {
       <Swiper autoplay={{ delay: 2000 }} modules={[Autoplay]} className="rounded-md">
         {!isLoading ? (
           <>
-            {data.length > 0 &&
+            {data?.length > 0 &&
               data.map((item) => (
                 <SwiperSlide key={item._id}>
                   <img

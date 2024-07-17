@@ -41,6 +41,9 @@ const CreateNews = () => {
       }
     } catch (error) {
       console.log(error);
+      if (error?.data?.error?.code === 11000) {
+        toast.error('Title is duplicate. change title');
+      }
     }
   };
 
