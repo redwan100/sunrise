@@ -21,6 +21,14 @@ const newsApi = baseApi.injectEndpoints({
       providesTags: ['news'],
       invalidatesTags: ['news']
     }),
+    getSingleNews: builder.query({
+      query: (id) => ({
+        url: `/news/${id}`,
+        method: 'GET'
+      }),
+      transformResponse: (response) => response.data,
+      providesTags: ['news']
+    }),
 
     deleteNews: builder.mutation({
       query: (id) => ({
@@ -32,4 +40,9 @@ const newsApi = baseApi.injectEndpoints({
   })
 });
 
-export const { useCreateNewsMutation, useGetAllNewsQuery, useDeleteNewsMutation } = newsApi;
+export const {
+  useCreateNewsMutation,
+  useGetAllNewsQuery,
+  useGetSingleNewsQuery,
+  useDeleteNewsMutation
+} = newsApi;

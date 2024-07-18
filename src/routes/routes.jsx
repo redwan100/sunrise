@@ -20,6 +20,10 @@ import MainLayout from '../Layouts/MainLayout';
 import About from '../pages/About';
 import Contact from '../pages/contact/Contact';
 import DonationDetails from '../pages/donation/DonationDetails';
+import AllNewses from '../pages/news/AllNews';
+import NewsDetails from '../pages/news/NewsDetails';
+import AllPrograms from '../pages/program/AllProgram';
+import ProgramDetails from '../pages/program/ProgramDetails';
 
 const router = createBrowserRouter([
   {
@@ -35,8 +39,24 @@ const router = createBrowserRouter([
         element: <About />
       },
       {
+        path: 'all-news',
+        element: <AllNewses />
+      },
+      {
+        path: 'news/:id',
+        element: <NewsDetails />
+      },
+      {
         path: 'donation-details',
         element: <DonationDetails />
+      },
+      {
+        path: 'all-program',
+        element: <AllPrograms />
+      },
+      {
+        path: 'all-program/:id',
+        element: <ProgramDetails />
       },
       {
         path: 'contact',
