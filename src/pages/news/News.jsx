@@ -38,14 +38,13 @@ const News = () => {
                 <NewsCard news={news} />
               </motion.div>
             ))}
-
-            <div>
-              <Link
-                to="/all-news"
-                className="bg-primary-1 text-white block mx-auto w-max mt-8 mb-2 py-2 px-5 hover:bg-green-600 transition">
-                View All News
-              </Link>
-            </div>
+          </div>
+          <div className="">
+            <Link
+              to="/all-news"
+              className="bg-primary-1 text-white block mx-auto w-max mt-8 mb-2 py-2 px-5 hover:bg-green-600 transition">
+              View All News
+            </Link>
           </div>
         </div>
       ) : (

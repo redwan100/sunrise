@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { BiChevronDown, BiDonateHeart } from 'react-icons/bi';
+import { BiChevronDown } from 'react-icons/bi';
 import { CgMenuRight } from 'react-icons/cg';
 import { IoIosCloseCircleOutline } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import Container from '../Container';
 
 import logo from '../../../assets/logo.png';
+import DonationBtn from '../buttons/DonationBtn';
 
 const navItems = [
   {
@@ -63,7 +64,7 @@ const MobileMenu = () => {
         </div>
       </Container>
       <div
-        className={`bg-gray-800/80 backdrop-blur-lg text-white w-full min-h-screen fixed top-0 right-0 z-50 transition-all  translate-x-[120%] ${showMenu ? 'translate-x-0 visible' : 'invisible'}`}>
+        className={`bg-gray-800/80 backdrop-blur-lg text-white w-full min-h-screen fixed top-0 right-0 z-50 transition-all   ${showMenu ? 'translate-x-0' : 'translate-x-[120%]'}`}>
         <div className="container mx-auto px-4 grid place-content-center min-h-screen space-y-4">
           <span
             className="absolute top-3 right-5 text-white transition hover:text-red-500 text-2xl cursor-pointer"
@@ -103,11 +104,9 @@ const MobileMenu = () => {
               )}
             </div>
           ))}
-          <button className="ml-4" onClick={showMenuBar}>
-            <Link
-              to={'/donation-details'}
-              className="flex items-center justify-center gap-1 bg-green-500 text-white py-1 px-2 rounded-md font-medium  w-max ">
-              Donation <BiDonateHeart />
+          <button className="">
+            <Link to={'/donation-details'}>
+              <DonationBtn text="donation" className={'py-[6px] text-base w-max ml-4'} />
             </Link>
           </button>
         </div>

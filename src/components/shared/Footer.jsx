@@ -1,3 +1,4 @@
+import React from 'react';
 import { CiCalendarDate } from 'react-icons/ci';
 import { FaFacebook, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
@@ -18,7 +19,7 @@ const Footer = () => {
             <h1 className="text-white mb-1 text-2xl font-semibold capitalize">photo gallery</h1>
             <hr className="mb-6" />
             <div className="grid gap-5 grid-cols-3 mt-4">
-              <div className="overflow-hidden rounded-sm">
+              <div className="overflow-hidden rounded-sm grid-cols-2">
                 <img src={gallery} alt="gallery image" className="hover:scale-105 transition" />
               </div>
               <div className="overflow-hidden rounded-sm">
@@ -104,32 +105,28 @@ const Footer = () => {
               href="*"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#316FF6] transition"
-            >
+              className="hover:text-[#316FF6] transition">
               <FaFacebook />
             </a>
             <a
               href="*"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-red-500 transition"
-            >
+              className="hover:text-red-500 transition">
               <FaInstagramSquare />
             </a>
             <a
               href="*"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#1DA1F2] transition"
-            >
+              className="hover:text-[#1DA1F2] transition">
               <FaXTwitter />
             </a>
             <a
               href="*"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#0077B5] transition"
-            >
+              className="hover:text-[#0077B5] transition">
               <FaLinkedin />
             </a>
           </div>

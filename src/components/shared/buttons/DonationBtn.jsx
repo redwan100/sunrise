@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { FaHandHoldingDollar } from 'react-icons/fa6';
 import cn from '../../../utils/cn';

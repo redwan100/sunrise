@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { BiChevronDown, BiDonateHeart } from 'react-icons/bi';
+import { BiChevronDown } from 'react-icons/bi';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../assets/logo.png';
 import Container from '../Container';
 
 import { IoCall } from 'react-icons/io5';
 import { MdEmail, MdOutlineLocationCity } from 'react-icons/md';
+import DonationBtn from '../buttons/DonationBtn';
 
 const navItems = [
   {
@@ -128,10 +129,8 @@ const DesktopNavbar = () => {
               ))}
 
               <button className="">
-                <Link
-                  to={'/donation-details'}
-                  className="flex items-center gap-1 bg-green-500 text-white py-1 px-2 rounded-md font-medium ">
-                  Donation <BiDonateHeart />
+                <Link to={'/donation-details'}>
+                  <DonationBtn text="donation" className={'py-[6px] text-base'} />
                 </Link>
               </button>
             </ul>
