@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { BiPlus } from 'react-icons/bi';
-import { HiBookmark } from 'react-icons/hi';
+import { BiChevronDown } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -9,19 +8,17 @@ const sidebarItems = [
     id: uuidv4(),
     title: 'News',
     path: 'dashboard',
-    icon: <HiBookmark />,
+    icon: <BiChevronDown />,
     children: [
       {
         id: uuidv4(),
         title: 'Create',
-        path: 'create-news',
-        icon: <BiPlus />
+        path: 'create-news'
       },
       {
         id: uuidv4(),
         title: 'All News',
-        path: 'all-news',
-        icon: <HiBookmark />
+        path: 'all-news'
       }
     ]
   },
@@ -29,19 +26,17 @@ const sidebarItems = [
     id: uuidv4(),
     title: 'Program',
     path: 'program',
-    icon: <HiBookmark />,
+    icon: <BiChevronDown />,
     children: [
       {
         id: uuidv4(),
         title: 'Create',
-        path: 'create-program',
-        icon: <HiBookmark />
+        path: 'create-program'
       },
       {
         id: uuidv4(),
         title: 'All Program',
-        path: 'all-program',
-        icon: <HiBookmark />
+        path: 'all-program'
       }
     ]
   },
@@ -49,19 +44,17 @@ const sidebarItems = [
     id: uuidv4(),
     title: 'Recent Event',
     path: 'recent-event',
-    icon: <HiBookmark />,
+    icon: <BiChevronDown />,
     children: [
       {
         id: uuidv4(),
         title: 'Create',
-        path: 'create-recent-event',
-        icon: <HiBookmark />
+        path: 'create-recent-event'
       },
       {
         id: uuidv4(),
         title: 'All Event',
-        path: 'all-recent-event',
-        icon: <HiBookmark />
+        path: 'all-recent-event'
       }
     ]
   },
@@ -69,19 +62,17 @@ const sidebarItems = [
     id: uuidv4(),
     title: 'Home Slider',
     path: 'home-slider',
-    icon: <HiBookmark />,
+    icon: <BiChevronDown />,
     children: [
       {
         id: uuidv4(),
         title: 'Create',
-        path: 'create-homeslider',
-        icon: <HiBookmark />
+        path: 'create-homeslider'
       },
       {
         id: uuidv4(),
         title: 'All Slider',
-        path: 'all-homeslider',
-        icon: <HiBookmark />
+        path: 'all-homeslider'
       }
     ]
   },
@@ -89,19 +80,17 @@ const sidebarItems = [
     id: uuidv4(),
     title: 'Help People',
     path: 'poor-people',
-    icon: <HiBookmark />,
+    icon: <BiChevronDown />,
     children: [
       {
         id: uuidv4(),
         title: 'Create',
-        path: 'create-poor-people',
-        icon: <HiBookmark />
+        path: 'create-poor-people'
       },
       {
         id: uuidv4(),
         title: 'All People',
-        path: 'all-poor-people',
-        icon: <HiBookmark />
+        path: 'all-poor-people'
       }
     ]
   },
@@ -109,27 +98,19 @@ const sidebarItems = [
     id: uuidv4(),
     title: 'Moment',
     path: 'moment',
-    icon: <HiBookmark />,
+    icon: <BiChevronDown />,
     children: [
       {
         id: uuidv4(),
         title: 'Create',
-        path: 'create-moment',
-        icon: <HiBookmark />
+        path: 'create-moment'
       },
       {
         id: uuidv4(),
         title: 'All Moment',
-        path: 'all-moment',
-        icon: <HiBookmark />
+        path: 'all-moment'
       }
     ]
-  },
-  {
-    id: uuidv4(),
-    title: 'Login',
-    path: '/dasboard/contact',
-    icon: <HiBookmark />
   }
 ];
 const Sidebar = () => {
@@ -145,24 +126,24 @@ const Sidebar = () => {
 
   const renderItems = (items) => {
     return items.map((item) => (
-      <div key={item.id} className="mb-2">
+      <div key={item.id} className="mb-4">
         {item.children ? (
           <button
             onClick={() => toggleItem(item.id)}
-            className="flex items-center text-gray-600 hover:text-gray-800 transition duration-300 focus:outline-none">
-            {item.icon}
+            className="flex items-center justify-between border-b w-full border-neutral-600  text-neutral-400 hover:text-neutral-300 transition-all duration-300 focus:outline-none hover:border-b-neutral-500">
             <span className="ml-2">{item.title}</span>
+            <span className="text-xl">{item.icon}</span>
           </button>
         ) : (
           <Link
             to={item.path}
-            className="flex items-center text-gray-600 hover:text-gray-800 transition duration-300">
-            {item.icon}
+            className="flex items-center gap-1 text-neutral-400 hover:text-neutral-300 transition duration-300">
             <span className="ml-2">{item.title}</span>
+            <span>{item.icon}</span>
           </Link>
         )}
         {item.children && openItems.includes(item.id) && (
-          <div className="ml-4">
+          <div className="bg-neutral-700 rounded-md">
             {renderItems(item.children)} {/* Recursive call */}
           </div>
         )}

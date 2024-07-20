@@ -1,15 +1,17 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 
 const Dashboard = () => {
   return (
     // ! dasboard design
     <div className="w-full min-h-screen h-full">
-      <div className="w-full h-full grid grid-cols-[8rem_1fr]">
+      <div className="w-full h-full grid grid-cols-[10rem_1fr]">
         {/* ! sidebar */}
-        <aside className="bg-pink-300 min-h-screen">
-          <h3>Dashboard</h3>
+        <aside className="bg-neutral-800 min-h-screen py-2 px-1">
+          <Link to="/" className="text-neutral-100 my-2 block text-center border-b-2 pb-2">
+            SUNRISE
+          </Link>
           <div>
             <Sidebar />
           </div>
