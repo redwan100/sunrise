@@ -13,10 +13,12 @@ import CreateProgram from '../dashboard/pages/program/CreateProgram';
 import UpdateProgram from '../dashboard/pages/program/UpdateProgram';
 import AllRecentEvent from '../dashboard/pages/recentEvent/AllRecentEvent';
 
+import Login from '../components/shared/form/Login';
 import AllMoment from '../dashboard/pages/momentOfSunrise/AllMoment';
 import CreateMoment from '../dashboard/pages/momentOfSunrise/CreateMoment';
 import CreateRecentEvent from '../dashboard/pages/recentEvent/CreateRecentEvent';
 import MainLayout from '../Layouts/MainLayout';
+import ProtectRoute from '../Layouts/ProtectRoute';
 import About from '../pages/About';
 import Contact from '../pages/contact/Contact';
 import DonationDetails from '../pages/donation/DonationDetails';
@@ -61,12 +63,20 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact />
+      },
+      {
+        path: 'login',
+        element: <Login />
       }
     ]
   },
   {
     path: 'dashboard',
-    element: <Dashboard />,
+    element: (
+      <ProtectRoute>
+        <Dashboard />
+      </ProtectRoute>
+    ),
     children: [
       {
         path: '/dashboard/create-news',

@@ -87,7 +87,7 @@ const MobileMenu = () => {
                           onClick={showMenuBar}
                           key={subIndex}
                           to={submenuItem.path}
-                          className="block py-2 px-4 text-sm hover:text-gray-50 font-medium transition">
+                          className="block py-2 px-4 text-lg hover:text-gray-50 font-medium transition">
                           {submenuItem.name}
                         </Link>
                       ))}

@@ -225,18 +225,6 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@emotion/is-prop-valid@^0.8.2":
-  version "0.8.8"
-  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
-  integrity sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==
-  dependencies:
-    "@emotion/memoize" "0.7.4"
-
-"@emotion/memoize@0.7.4":
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.4.tgz#19bf0f5af19149111c40d98bb0cf82119f5d9eeb"
-  integrity sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==
-
 "@esbuild/aix-ppc64@0.19.12":
   version "0.19.12"
   resolved "https://registry.yarnpkg.com/@esbuild/aix-ppc64/-/aix-ppc64-0.19.12.tgz#d1bc06aedb6936b3b6d313bf809a5a40387d2b7f"
@@ -1593,14 +1581,12 @@ fraction.js@^4.3.7:
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.3.7.tgz#06ca0085157e42fda7f9e726e79fefc4068840f7"
   integrity sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==
 
-framer-motion@^11.0.5:
-  version "11.0.5"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.0.5.tgz#2ae1341d8605a01c50009d3bb195a67e4e2bfc69"
-  integrity sha512-Lb0EYbQcSK/pgyQUJm+KzsQrKrJRX9sFRyzl9hSr9gFG4Mk8yP7BjhuxvRXzblOM/+JxycrJdCDVmOQBsjpYlw==
+framer-motion@^11.3.17:
+  version "11.3.17"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.3.17.tgz#47bd13fe3af660e4e3eebaf21f3a0d9d32c7939b"
+  integrity sha512-LZcckvZL8Rjod03bud8LQcp+R0PLmWIlOSu+NVc+v6Uh43fQr4IBsEAX7sSn7CdBQ1L0fZ/IqSXZVPnGFSMxHw==
   dependencies:
     tslib "^2.4.0"
-  optionalDependencies:
-    "@emotion/is-prop-valid" "^0.8.2"
 
 fsevents@~2.3.2, fsevents@~2.3.3:
   version "2.3.3"
@@ -2120,6 +2106,11 @@ json5@^2.2.3:
     object.assign "^4.1.4"
     object.values "^1.1.6"
 
+jwt-decode@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-4.0.0.tgz#2270352425fd413785b2faf11f6e755c5151bd4b"
+  integrity sha512-+KJGIyHgkGuIq3IEBNftfhW/LfWhXUIY6OmyVWjliu5KH1y0fw7VQ8YndE2O4qZdMSd9SqbnC8GOcZEy0Om7sA==
+
 keyv@^4.5.4:
   version "4.5.4"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-4.5.4.tgz#a879a99e29452f942439f2a405e3af8b31d4de93"
@@ -2591,6 +2582,11 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
+
+redux-persist@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/redux-persist/-/redux-persist-6.0.0.tgz#b4d2972f9859597c130d40d4b146fecdab51b3a8"
+  integrity sha512-71LLMbUq2r02ng2We9S215LtPu3fY0KgaGE0k8WRgl6RkqxtGfl7HUozz1Dftwsb0D/5mZ8dwAaPbtnzfvbEwQ==
 
 redux-thunk@^3.1.0:
   version "3.1.0"
