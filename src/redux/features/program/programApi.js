@@ -1,4 +1,4 @@
-import { baseApi } from '../../api/baseApi';
+import { baseApi } from '../../api/baseApi.js';
 const programApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     createProgram: builder.mutation({

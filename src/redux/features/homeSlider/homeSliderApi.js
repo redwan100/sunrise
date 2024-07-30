@@ -1,4 +1,4 @@
-import { baseApi } from '../../api/baseApi';
+import { baseApi } from '../../api/baseApi.js';
 
 const homeSliderApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({

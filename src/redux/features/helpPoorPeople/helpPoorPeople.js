@@ -1,4 +1,4 @@
-import { baseApi } from '../../api/baseApi';
+import { baseApi } from '../../api/baseApi.js';
 
 const helpPoorPeople = baseApi.injectEndpoints({
   endpoints: (builder) => ({

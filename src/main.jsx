@@ -6,7 +6,7 @@ import './index.css';
 import router from './routes/routes.jsx';
 
 import { Provider } from 'react-redux';
-import { persistor, store } from './redux/store.ts';
+import { persistor, store } from './redux/store.js';
 
 import { PersistGate } from 'redux-persist/integration/react';
 import { Toaster } from 'sonner';
